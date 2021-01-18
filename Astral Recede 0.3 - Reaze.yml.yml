@@ -1,0 +1,55 @@
+#« Astral Recede Configuration »
+astralrecede:    
+  display: '%group-color%Astral Recede'    
+  description: 'Allows player into the Astral plane, this enchantment prevents\nyou from taking and dealing damage but heals hearts for 5 seconds\nReaze was here'    
+  applies-to: 'Helmets'  
+  type: 'DEFENSE'      
+  group: 'ANCIENT'
+  applies:    
+    - ALL_HELMET  
+  settings:
+    required-enchants:
+      - 'healing:3' 
+    removed-enchants:
+      - 'healing:3' 
+    not-applyable-with:
+      - 'deathgod'
+    removeable: false
+  levels:
+    1:     
+      chance: 10  
+      cooldown: 120
+      condition: '%victim health% > 6 : %stop%'   
+      effects:    
+	- 'MESSAGE:&6&l** Astral Recede ** %victim%'
+	- 'PLAY_SOUND_OUTLOUD:PREPARE_ATTACK'
+	- 'POTION:WEAKNESS:5:100 %victim%'
+	- 'INVINCIBLE:0:100 %victim%'
+  - 'ADD_HEALTH:16 %victim%' 
+	- 'WAIT:100'
+	- 'PLAY_SOUND:PREPARE_MIRROR'
+    2:     
+      chance: 20  
+      cooldown: 120
+      condition: 
+	- '%victim health% > 8 : %stop%'   
+      effects:    
+	- 'MESSAGE:&6&l** Astral Recede ** %victim%'
+	- 'PLAY_SOUND_OUTLOUD:PREPARE_ATTACK'
+	- 'POTION:WEAKNESS:5:100 %victim%'
+	- 'INVINCIBLE:0:100 %victim%'
+        - 'ADD_HEALTH:16 %victim%' 
+	- 'WAIT:100'
+	- 'PLAY_SOUND:PREPARE_MIRROR'
+    3:     
+      chance: 30  
+      cooldown: 120
+      condition: '%victim health% > 10 : %stop%'   
+      effects:  
+	- 'MESSAGE:&6&l** Astral Recede ** %victim%'
+	- 'PLAY_SOUND_OUTLOUD:PREPARE_ATTACK'
+	- 'POTION:WEAKNESS:5:100 %victim%'
+	- 'INVINCIBLE:0:100 %victim%'
+        - 'ADD_HEALTH:20 %victim%' 
+	- 'WAIT:100'
+	- 'PLAY_SOUND:PREPARE_MIRROR'

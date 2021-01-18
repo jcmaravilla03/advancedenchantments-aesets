@@ -1,0 +1,55 @@
+#« Spectral Infliction Configuration »
+spectralinfliction:
+  display: '%group-color%Spectral Infliction'
+  description: '"Let them know who's about to die, Gives glowing effect when\nyour target is at low HP and silences their arrow deflect\nReaze was here"''
+  applies-to: 'Bow'
+  type: 'BOW'
+  group: 'Mastery'
+  applies:
+    - BOW
+  levels:
+    1:
+      chance: 10
+      cooldown: 5
+      condition:
+        - "%victim health% > 10 : %stop%"
+      effects:
+	- 'POTION:GLOWING:0:100	%victim%'
+	- 'DISABLE_ACTIVATION:arrowdeflect:10 %victim%'
+	- 'PLAY_SOUND:INFECT'
+    2:
+      chance: 15
+      cooldown: 5
+      condition:
+        - "%victim health% > 10 : %stop%"
+      effects:
+	- 'POTION:GLOWING:0:100	%victim%'
+	- 'DISABLE_ACTIVATION:arrowdeflect:10 %victim%'
+	- 'PLAY_SOUND:INFECT'
+    3:
+      chance: 20
+      cooldown: 5
+      condition:
+        - "%victim health% > 10 : %stop%"
+      effects:
+	- 'POTION:GLOWING:0:100	%victim%'
+	- 'DISABLE_ACTIVATION:arrowdeflect:10 %victim%'
+	- 'PLAY_SOUND:INFECT'
+    4:
+      chance: 25
+      cooldown: 5
+      condition:
+        - "%victim health% > 10 : %stop%"
+      effects:
+	- 'POTION:GLOWING:0:100	%victim%'
+	- 'DISABLE_ACTIVATION:arrowdeflect:10 %victim%'
+	- 'PLAY_SOUND:INFECT'
+    5:
+      chance: 30
+      cooldown: 5
+      condition:
+        - "%victim health% > 10 : %stop%"
+      effects:
+	- 'POTION:GLOWING:0:100	%victim%'
+	- 'DISABLE_ACTIVATION:arrowdeflect:10 %victim%'
+	- 'PLAY_SOUND:INFECT'
