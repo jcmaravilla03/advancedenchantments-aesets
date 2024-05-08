@@ -1,0 +1,50 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Darkbringer'
+
+# Currently supported are only melee weapons
+material: NETHERITE_AXE
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&8&lDiabolus Ex Machina'
+
+# Weapon's lore
+lore:
+  - 'Intervention delineated by hopelessness and fear'
+  - ''
+  - '&8&LDARKBRINGER &f&lWEAPON BONUS'
+  - '&f&l* &fBuilt in Horrify .'
+  - '&f&l* &fDEMONIC IMMOLATION (Burns the enemies around) .'
+  - '&7(Requires all 4 Darkbringer armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'Sharpness:5'
+  - 'unbreaking:4'
+  - 'demoniclifesteal:%1-5%'
+  - 'vampirelord:%1-3%'
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 50
+    cooldown: 18
+    effects:
+      - 'POTION:CONFUSION:23:80 <aoe> radius=32 target=damageable </aoe>'
+      - 'POTION:SLOW:23:80 <aoe> radius=32 target=damageable </aoe>'
+      - 'POTION:SLOW_DIGGING:23:80 <aoe> radius=32 target=damageable </aoe>'
+      - 'MESSAGE:&4&l** HORRIFY ** <aoe> radius=32 target=damageable </aoe>'
+      - 'PARTICLE:FLAME:20:2<aoe> radius=5 target=damageable </aoe>'
+      - 'FLAME:3 <aoe> radius=5 target=damageable </aoe>'
+      - 'ADD_HARM:4 <aoe> radius=5 target=damageable </aoe>'
+      - 'MESSAGE:&c&l** DEMONIC IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'
+      - 'WAIT:20'
+      - 'FLAME:3 <aoe> radius=5 target=damageable </aoe>'
+      - 'ADD_HARM:4 <aoe> radius=5 target=damageable </aoe>'
+      - 'MESSAGE:&c&l** DEMONIC IMMOLATION ** <aoe> radius=5 target=damageable </aoe>'

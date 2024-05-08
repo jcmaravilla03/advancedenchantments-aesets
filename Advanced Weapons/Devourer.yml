@@ -1,0 +1,50 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Devourer'
+
+# Currently supported are only melee weapons
+material: NETHERITE_SWORD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&5&lTeeth of the Forsaken'
+
+# Weapon's lore
+lore:
+  - ''
+  - '&5&oAccording to legends, anyone who holds this will have unyielding hunger.'
+  - ''
+  - '&5&lDevourer &f&lWEAPON BONUS'
+  - '&f&l* &fUltimate FEAST (Steal Soul, Durability, Life).'
+  - '&f&l* &f40% Damage Reduction.'
+  - '&7(Requires all 4 Devourer armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'Sharpness:8'
+  - 'unbreaking:3'
+  - 'reflectiveblock:3'
+  - 'titantrap:%1-3%'
+  - 'dualwield:%1-3%'
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 30
+    cooldown: 4
+    effects:
+      - 'DAMAGE_ARMOR:<random number>4-10</random number> %victim%'
+      - 'REMOVE_SOULS:<random number>200-400</random number> %victim%'
+      - 'ADD_DURABILITY:<random number>1-4</random number> %attacker%'
+      - 'STEAL_HEALTH:<random number>3-6</random number>'
+      - 'CONSOLE_COMMAND:ae giveitem %attacker name% soulgem 1 50'
+      - 'MESSAGE:&6&l** Ultimate Feast ** &7(%victim name%)'
+  DEFENSE:
+    chance: 100
+    effects:
+      - 'REMOVE_DAMAGE:40 %victim%'

@@ -1,0 +1,72 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Mountainbeast'
+
+# Currently supported are only melee weapons
+material: NETHERITE_SWORD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&b&lThunder Beast Nichirin'
+
+# Weapon's lore
+lore:
+  - '&b&lForged by blacksmiths trained for thousand years'
+  - '&b&lImbued with an alloy that can slice even lightning itself'
+  - ''
+  - '&b&lTHUNDER BEAST &f&lWEAPON BONUS'
+  - '&f&l* &f300% Damage Increase.'
+  - '&f&l* &fThunder Clap 2nd Counter.'
+  - '&f&l* &fApplicable on MOBS.'
+  - '&7(Requires all 4 MOUNTAIN BEAST armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'lifesteal:%1-5%'
+  - 'silence:%1-4%'
+  - 'sharpness:8'
+  - 'unbreaking:3'
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 90
+    cooldown: 2
+    effects:
+      - INCREASE_DAMAGE:300 %attacker%
+  DEFENSE:
+    chance: 35
+    cooldown: 15
+    effects:
+      - 'TELEPORT_BEHIND %attacker%'
+      - 'MESSAGE:&b&l*** &a&lTHUNDER &f&lCLAP &b&l***'
+      - LIGHTNING %attacker%
+      - 'WAIT:5'
+      - 'PULL_AWAY:3.0 %attacker%'
+      - LIGHTNING %attacker%
+      - DAMAGE_ARMOR:10 %attacker%
+      - 'ADD_HARM:<random number>4-6</random number> %attacker%'
+      - 'POTION:SPEED:2:100 %victim%'
+  ATTACK_MOB:
+    chance: 90
+    cooldown: 2
+    effects:
+      - INCREASE_DAMAGE:300 %attacker%
+  DEFENSE_MOB:
+    chance: 35
+    cooldown: 15
+    effects:
+      - 'TELEPORT_BEHIND %attacker%'
+      - 'MESSAGE:&b&l*** &a&lTHUNDER &f&lCLAP &b&l***'
+      - LIGHTNING %attacker%
+      - 'WAIT:5'
+      - 'PULL_AWAY:3.0 %attacker%'
+      - LIGHTNING %attacker%
+      - 'ADD_HARM:<random number>4-6</random number> %attacker%'
+      - 'POTION:SPEED:2:100 %victim%'

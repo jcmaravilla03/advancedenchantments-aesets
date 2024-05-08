@@ -1,0 +1,51 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Lightbearer'
+
+# Currently supported are only melee weapons
+material: NETHERITE_SWORD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&e&lDeus Ex Machina'
+
+# Weapon's lore
+lore:
+  - ''
+  - '&e&oDivine Weapon Gift from Above'
+  - ''
+  - '&e&lDeus Ex Machina &f&lWEAPON BONUS'
+  - '&f&l* &f100% Increased Damage when using this sword.'
+  - '&f&l* &fHeavens Smite (Divine Lightning Proc).'
+  - '&7(Requires all 4 Lightbearer armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'Sharpness:8'
+  - 'unbreaking:3'
+  - 'reflectiveblock:3'
+  - 'titantrap:%1-3%'
+  - 'dualwield:%1-3%'
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 25
+    cooldown: 10
+    effects:
+      - MESSAGE:&4&l** Divine Lightning ** %victim%
+      - WAIT:10
+      - LIGHTNING %victim%
+      - DAMAGE_ARMOR:6 %victim%
+      - ADD_HARM:6 %victim%
+      - WAIT:10
+      - DAMAGE_ARMOR:6 %victim%
+      - WAIT:10
+      - DAMAGE_ARMOR:6 %victim%
+      - LIGHTNING %victim%
+      - DAMAGE_ARMOR:6 %victim%

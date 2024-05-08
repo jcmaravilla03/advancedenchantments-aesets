@@ -1,0 +1,48 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Zero'
+
+# Currently supported are only melee weapons
+material: NETHERITE_SWORD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&8&LIcicle'
+
+# Weapon's lore
+lore:
+  -  'An Icicle taken from the ice cold north, so cold'
+  -  'can freeze and tore the flesh of the enemy easily'
+  - ''
+  - '&8&LIcicle Sword &f&lWEAPON BONUS'
+  - '&f&l* &f30% Chance of Slowing the player when hit .'
+  - '&f&l* &fDouble Damage on sneaking .'
+  - '&7(Requires all 4 Zero armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'Sharpness:8'
+  - 'unbreaking:4'
+  - 'dualwield:3'
+  - 'silence:%1-4%'
+  - 'dualwield:%1-3%'
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 50
+    cooldown: 15
+    condition: '%attacker is sneaking% = false : %stop%'
+    effects:
+        - 'DOUBLE_DAMAGE'
+        - "MESSAGE: **&8&lAssasinate**  %attacker%"
+  DEFENSE:
+    chance: 30
+    cooldown: 5
+    effects:
+        - 'POTION:SLOW:3s:100 %victim%'

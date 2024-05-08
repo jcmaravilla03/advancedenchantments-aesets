@@ -1,0 +1,47 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Royalknight'
+
+# Currently supported are only melee weapons
+material: NETHERITE_SWORD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&a&lConquerors &f&lLance'
+
+# Weapon's lore
+lore:
+  - 'Weapon Only be used by the True Blooded Royals'
+  - ''
+  - '&a&lRoyal Knight &f&lWEAPON BONUS'
+  - '&f&l*Passive AE Block'
+  - '&f&l*Increased Sword Damage 200%.'
+  - '&7(Requires all 4 Royal Knight armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'annihilate:%1-6%'
+  - 'disintegrate:%4%'
+  - 'sharpness:5'
+  - 'unbreaking:3'
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  DEFENSE:
+      chance: 30
+      cooldown: 7
+      effects:
+        - 'STOP_ATTACK'
+        - 'ADD_HARM:2 %attacker%'
+  ATTACK:
+      chance: 100
+      cooldown: 2
+      effects:
+        - 'ADD_HARM:<random number>4-4</random number> %victim%'
+        - 'MESSAGE: &f&l**&a&lWhite Knight&f&l** %attacker%'

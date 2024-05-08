@@ -1,0 +1,44 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Vladimir'
+
+# Currently supported are only melee weapons
+material: NETHERITE_SWORD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&5&LPredator of the Night'
+
+# Weapon's lore
+lore:
+  - '&d&lDrenched with the blood of the Original Predator'
+  - ''
+  - '&e&LPredator Sword &f&lWEAPON BONUS'
+  - '&f&l* &fstrength 2 on swing.'
+  - '&f&l* &fSoul Capture (Takes the soul of the enemy).'
+  - '&7(Requires all 4 Vladimir armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'sharpness:8'
+  - 'unbreaking:4'
+  - 'soultrap:%1-3%'
+  - 'demonsamurai:%1-8%'
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 40
+    cooldown: 15
+    effects:
+      - 'REMOVE_SOULS:500 %attacker%'
+      - 'CONSOLE_COMMAND:ae giveitem %attacker name% soulgem 1 250'
+      - 'MESSAGE:&4&l** SOUL CAPTURE ** &7(%victim name%)'
+  SWING:
+    effects:
+      - 'POTION:STRENGTH:1:600'

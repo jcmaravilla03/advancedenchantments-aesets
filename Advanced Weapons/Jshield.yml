@@ -1,0 +1,64 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Juggernaut'
+
+# Currently supported are only melee weapons
+material: SHIELD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&8&LAegis'
+
+# Weapon's lore
+lore:
+  - '&7Shield of Aegis,Unrelenting and Never Yielding'
+  - ''
+  - '&7&lAegis &f&lWEAPON BONUS'
+  - '&f&l* 30% to disable enemy buffs <5 seconds cooldown>'
+  - '&f&l* Spiked Carapace (Improved Cactus) .'
+  - '&f&l* Unyielding Spirit Shield (Absorbing Soul) .'
+  - '&f&l* Gears 3 and Resistance Buff on Use .'
+  - '&7(Requires all 4 Juggernaut armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'unbreaking:4'
+  - 'thorns:3'
+  - 'vengefuldiminish:%1-6%'
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 30
+    cooldown: 5
+    effects:
+      - 'DISABLE_ACTIVATION:cactus:5 %victim%'
+      - 'DISABLE_ACTIVATION:enlighted:5 %victim%'
+      - 'DISABLE_ACTIVATION:angelic:5 %victim%'
+      - 'DISABLE_ACTIVATION:divineenlighted:5 %victim%'
+      - 'DISABLE_ACTIVATION:dodge:5 %victim%'
+      - 'DISABLE_ACTIVATION:valor:5 %victim%'
+      - 'DISABLE_ACTIVATION:mightycactus:5 %victim%'
+      - 'DISABLE_ACTIVATION:eternalalloy:7 %victim%'
+      - 'DISABLE_ACTIVATION:bewitchedhex:7 %victim%'
+      - 'DISABLE_ACTIVATION:extremeinsanity:7 %victim%'
+      - 'DISABLE_ACTIVATION:masterblacksmith:7 %victim%'
+      - 'DISABLE_ACTIVATION:blessed:7 %victim%'
+      - 'PARTICLE:FLAME:3:20'
+      - 'FLAME:6 %victim%'
+  DEFENSE:
+    chance: 80
+    cooldown: 5
+    effects:
+      - 'STOP_ATTACK'
+      - 'ADD_HARM:<random number>1-3</random number> %attacker%'
+      - 'REMOVE_SOULS:200 %attacker%'
+  RIGHT_CLICK:
+    effects:
+      - 'POTION:SPEED:2:40'
+      - 'POTION:DAMAGE_RESISTANCE:1:40'

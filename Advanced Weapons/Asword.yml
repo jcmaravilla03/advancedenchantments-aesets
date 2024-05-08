@@ -1,0 +1,44 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Ashlord'
+
+# Currently supported are only melee weapons
+material: NETHERITE_SWORD
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&8&LAshfall &c&lAtmosphere'
+
+# Weapon's lore
+lore:
+  - '&8&lA sky manifested of the surround of gray'
+  - ''
+  - '&8&lASHFALL &c&lATMOSPHERE &f&lWEAPON BONUS'
+  - '&f&l* &fDeal +30% Durability Damage.'
+  - '&f&l* &f25% chance to Cause Confusion.'
+  - '&f&l* &f25% chance to increase damage up to 200%. (4 second cooldown)'
+  - '&7(Requires all 4 Ashlord armor items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'sharpness:8'
+  - 'unbreaking:3'
+  - 'fireaspect:5'
+  - 'silence:%1-4%'
+  - 'extremeinsanity:%5-8%'
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 25
+    cooldown: 4
+    effects:
+      - 'DAMAGE_ARMOR:<random number>8-15</random number>'
+      - 'POTION:CONFUSION:0:60 %victim%'
+      - 'INCREASE_DAMAGE:200 %attacker%'

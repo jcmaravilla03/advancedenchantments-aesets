@@ -1,0 +1,44 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Gorgon'
+
+# Currently supported are only melee weapons
+material: BOW
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&a&lVirulent Touch'
+
+# Weapon's lore
+lore:
+  - '&AA bow taken from a Ranger Heroine'
+  - '&Asaid to be corrupted by the touch of the Gorgon'
+  - ''
+  - '&2&lGORGON WEAPON BONUS'
+  - '&ADeal +300% bow damage to all enemies.'
+  - '&ADeal +50% durability damage.'
+  - '&ASilence Arrow Deflect.'
+  - '&A(Requires all 4 GORGON items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'venom:%1-3%'
+  - 'virus:%1-4%'
+  - 'power:10'
+  - 'unbreaking:3'
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  BOW:
+    chance: 100
+    effects:
+      - 'INCREASE_DAMAGE:300'
+      - 'DAMAGE_ARMOR:<random number>30-35</random number> %victim%'
+      - 'MESSAGE:&6&l** Corrupted Bow ** %attacker%'
+      - 'DISABLE_ACTIVATION:arrowdeflect:7 %victim%'

@@ -1,0 +1,45 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Ranger'
+
+# Currently supported are only melee weapons
+material: BOW
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&A&lUltima Bow'
+
+# Weapon's lore
+lore:
+  - '&AThe legendary Bow of The Archer'
+  - '&ACan be wielded by only the precise users'
+  - '&Ahaving the Ultimate Potential.'
+  - ''
+  - '&A&lRanger WEAPON BONUS'
+  - '&ADeal +300% damage to all enemies.'
+  - '&ASilence Arrow Deflect.'
+  - '&APassive Ballista AE without Slow.'
+  - '&A(Requires all 4 Ranger items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'silence:%1-4%'
+  - 'power:10'
+  - 'unbreaking:3'
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  BOW:
+    chance: 100
+    effects:
+      - 'INCREASE_DAMAGE:300'
+      - 'DAMAGE_ARMOR:<random number>30-35</random number> %victim%'
+      - 'REMOVE_RANDOM_ARMOR %victim%'
+      - 'MESSAGE:&6&l** Ultimate Bow ** %attacker%'
+      - 'DISABLE_ACTIVATION:arrowdeflect:7 %victim%'
