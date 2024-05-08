@@ -1,0 +1,182 @@
+# Advanced Sets
+# These sets are fully creatable, to create your own simply copy this file, rename it and edit it however you want!
+
+# ** Set Materials:
+# * LEATHER (change-able color)
+# * IRON
+# * GOLD
+# * CHAIN
+# * DIAMOND
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for sets.
+
+#  ** Set Events
+#    Change upon what event should sets trigger
+#    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn)
+#    - ATTACK : Set Event run only when attacking another player
+#    - DEFENSE : Set Event run only when being attacked
+#    - DEFENSE_BOW : Set Event run only when player gets shot by a bow
+#    - MINING : Gives effects when block is mined
+#    - ATTACK_MOB : Gives effects when player attacks mob
+#    - KILL_MOB : Effects given when attacked mob is killed
+#    - BOW : Effects given when player is shot by another player
+#    - KILL_PLAYER : Effects given when attacker kills a player
+#    - DEATH : Runs when player dies due to another player.
+#    - RIGHT_CLICK : Runs when player right clicks held item
+#    - BOW_MOB : Effects given when mob is shot by player
+#    - FIRE : Effects given when player is on fire
+#    - EXPLOSION : Effects given when player gets hit by explosion
+#    - SWING : Enchant runs when player swings
+#    - FALL_DAMAGE : Set Event runs when player takes fall damage
+#    - DEFENSE_MOB : Set Event runs when mob attacks a player
+#    - SHIFT : Set Event runs when player toggles crouching (shifts)
+#    - ITEM_BREAK : Set Event runs when player toggles crouching (shifts)
+#    - CATCH_FISH : Set Event runs when player catches a fish
+# Set Events & Enchant types are intercompatible together
+
+# ** Creating set effects, this explains the system
+#events:
+#  <any of the effects from the list>:
+#    chance: <chance of effects activating, 1-100> (Optional)
+#    cooldown: <cooldown period after effects activate, in seconds> (Optional)
+#    effects: <effects are available in enchantments.yml>
+#    # E.g.: - 'INCREASED_DAMAGE:10'
+
+name: '&d&lVladimir'
+material: NETHERITE
+settings:
+  equipped:
+    - '&a&l(!) &aYou have activated Vladimir Set!'
+  unequipped:
+    - '&c&l(!) &cYou have deactivated Vladimir Set!'
+items:
+  helmet:
+    name: '&d&lHorrific Mask'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&dA horror-inflicting symbol.'
+      - ''
+      - '&5&lVLADIMIR SET BONUS'
+      - '&d*Feast Ability(Dual Wield with Lifesteal).'
+      - '&d*Mana Drain Defense Ability (Take away Durability).'
+      - '&d*Night Vision.'
+      - '&d*Immune to Weakness.'
+      - '&d*Spawn Vindicator (Heals Wearer) .'
+      - '&7&o(Requires all 4 Vladimir items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "armored:%1-4%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "hardened:%1-3%"
+      - "marksman:%1-4%"
+      - "drunk:%1-4%"
+      - "enlighted:%1-3%"
+      - "deathbringer:%1-3%"
+      - "angelic:%1-5%"
+      - "implants:%1-3"
+  chestplate:
+    name: '&d&lCuirass of Healing Aura'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&dA life-draining grasp.'
+      - ''
+      - '&5&lVLADIMIR SET BONUS'
+      - '&d*Feast Ability(Dual Wield with Lifesteal).'
+      - '&d*Mana Drain Defense Ability (Take away Durability).'
+      - '&d*Night Vision.'
+      - '&d*Immune to Weakness.'
+      - '&d*Spawn Vindicator (Heals Wearer) .'
+      - '&7&o(Requires all 4 Vladimir items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "armored:%1-4%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "hardened:%1-3%"
+      - "marksman:%1-4%"
+      - "enlighted:%1-3%"
+      - "overload:%1-3%"
+      - "deathbringer:%1-3%"
+      - "etherealdodge:%1-5%"
+  leggings:
+    name: '&d&lCursed Legplate'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&dA soul-tainted mark.'
+      - ''
+      - '&5&lVLADIMIR SET BONUS'
+      - '&d*Feast Ability(Dual Wield with Lifesteal).'
+      - '&d*Mana Drain Defense Ability (Take away Durability).'
+      - '&d*Night Vision.'
+      - '&d*Immune to Weakness.'
+      - '&d*Spawn Vindicator (Heals Wearer) .'
+      - '&7&o(Requires all 4 Vladimir items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "armored:%1-4%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "hardened:%1-3%"
+      - "marksman:%1-4%"
+      - "deathbringer:%1-3%"
+      - "valor:%1-5%"
+      - "angelic:%1-5%"
+      - "cactus:%1-2%"
+  boots:
+    name: '&d&lUndying Sabaton'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&dAn immortal-holding armorpiece.'
+      - ''
+      - '&5&lVLADIMIR SET BONUS'
+      - '&d*Feast Ability(Dual Wield with Lifesteal).'
+      - '&d*Mana Drain Defense Ability (Take away Durability).'
+      - '&d*Night Vision.'
+      - '&d*Immune to Weakness.'
+      - '&d*Spawn Vindicator (Heals Wearer) .'
+      - '&7&o(Requires all 4 Vladimir items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "armored:%1-4%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "hardened:%1-3%"
+      - "marksman:%1-4%"
+      - "enlighted:%1-3%"
+      - "deathbringer:%1-3%"
+      - "rocketescape:%1-3%"
+events:
+  ATTACK:
+    chance: 15
+    cooldown: 12
+    effects:
+      - 'ADD_HARM:<random number>2-5</random number> %victim%'
+      - 'ADD_HEALTH:<random number>5-6</random number> %attacker%'
+      - 'MESSAGE:&d&l** Feast ** &7(&c- %random%HP&7) %attacker%'
+      - 'CURE_PERMANENT:WEAKNESS %attacker%'
+  DEFENSE:
+    chance: 60
+    cooldown: 35
+    effects:
+      - 'DAMAGE_ARMOR:60 %attacker%'
+      - 'POTION:SLOW:10:60 %attacker%'
+      - 'GUARD:VINDICATOR:%victim%'
+      - 'GUARD:VINDICATOR:%victim%'
+      - 'ADD_HEALTH:<random number>1-6</random number> %victim%'
+  EFFECT_STATIC:
+    chance: 100
+    effects:
+      - 'POTION:NIGHT_VISION:1'

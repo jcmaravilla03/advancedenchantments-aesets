@@ -1,0 +1,195 @@
+# Advanced Sets
+# These sets are fully creatable, to create your own simply copy this file, rename it and edit it however you want!
+
+# ** Set Materials:
+# * LEATHER (change-able color)
+# * IRON
+# * GOLD
+# * CHAIN
+# * DIAMOND
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for sets.
+
+#  ** Set Events
+#    Change upon what event should sets trigger
+#    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn)
+#    - ATTACK : Set Event run only when attacking another player
+#    - DEFENSE : Set Event run only when being attacked
+#    - DEFENSE_BOW : Set Event run only when player gets shot by a bow
+#    - MINING : Gives effects when block is mined
+#    - ATTACK_MOB : Gives effects when player attacks mob
+#    - KILL_MOB : Effects given when attacked mob is killed
+#    - BOW : Effects given when player is shot by another player
+#    - KILL_PLAYER : Effects given when attacker kills a player
+#    - DEATH : Runs when player dies due to another player.
+#    - RIGHT_CLICK : Runs when player right clicks held item
+#    - BOW_MOB : Effects given when mob is shot by player
+#    - FIRE : Effects given when player is on fire
+#    - EXPLOSION : Effects given when player gets hit by explosion
+#    - SWING : Enchant runs when player swings
+#    - FALL_DAMAGE : Set Event runs when player takes fall damage
+#    - DEFENSE_MOB : Set Event runs when mob attacks a player
+#    - SHIFT : Set Event runs when player toggles crouching (shifts)
+#    - ITEM_BREAK : Set Event runs when player toggles crouching (shifts)
+#    - CATCH_FISH : Set Event runs when player catches a fish
+# Set Events & Enchant types are intercompatible together
+
+# ** Creating set effects, this explains the system
+#events:
+#  <any of the effects from the list>:
+#    chance: <chance of effects activating, 1-100> (Optional)
+#    cooldown: <cooldown period after effects activate, in seconds> (Optional)
+#    effects: <effects are available in enchantments.yml>
+#    # E.g.: - 'INCREASED_DAMAGE:10'
+
+name: '&2&lGorgon Armor'
+material: NETHERITE
+settings:
+  equipped:
+    - '&a&l(!) &aYou have gained the curse of the Gorgon!'
+  unequipped:
+    - '&c&l(!) &cYou have lost the Curse of the Gorgon!'
+items:
+  helmet:
+    name: '&2&lPetrifying Eyes'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&a&oThose who managed to evade the petrifying gaze'
+      - '&aof the Gorgon, melts in its corrosive venom'
+      - ''
+      - '&2&lGORGON SET BONUS'
+      - '&a&l* &a Caustic Manifestation (Chance to Disables enemy Buffs)'
+      - '&a&l* &a Epitome of Malevolence (Chance to Give Increased Slow and Poison)'
+      - '&a&l* &a Lethal Poison Bow Damage'
+      - '&a&l* &6 Immune to Poison'
+      - '&7&o(Requires all 4 Gorgon items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "marksman:%1-4%"
+      - "angelic:%1-5%"
+      - "wildmark:%1-3%"
+      - "enlighted:%1-3%"
+      - "smokebomb:%1-5%"
+      - "poisoned:%1-3%"
+      - "armored:%1-4%"
+      - "tank:%1-4%"
+      - "implants:%1-3%"
+      - "aquatic:1"
+
+  chestplate:
+    name: '&2&lGrasp of the Serpent'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&a&oChestplate of the Cursed God'
+      - '&a&oCovered by Scales of a Thousand Snakes '
+      - ''
+      - '&2&lGORGONSET BONUS'
+      - '&a&l* &a Caustic Manifestation (Chance to Disables enemy Buffs)'
+      - '&a&l* &a Epitome of Malevolence (Chance to Give Increased Slow and Poison)'
+      - '&a&l* &a Lethal Poison Bow Damage'
+      - '&a&l* &6 Immune to Poison'
+      - '&7&o(Requires all 4 Gorgon items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "marksman:%1-4%"
+      - "angelic:%1-5%"
+      - "wildmark:%1-3%"
+      - "poisoned:%1-3%"
+      - "armored:%1-4%"
+      - "tank:%1-4%"
+      - "diminish:%1-6%"
+      - "godlyoverload:%1-3%"
+  leggings:
+    name: '&2&lCorrosive Covering'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&a&oBeen alive since ancient times'
+      - '&a&oThe Snake Goddess have learned to adopt'
+      - '&a&oand kill its prey different ways'
+      - ''
+      - '&2&lGORGON SET BONUS'
+      - '&a&l* &a Caustic Manifestation (Chance to Disables enemy Buffs)'
+      - '&a&l* &a Epitome of Malevolence (Chance to Give Increased Slow and Poison)'
+      - '&a&l* &a Lethal Poison Bow Damage'
+      - '&a&l* &6 Immune to Poison'
+      - '&7&o(Requires all 4 Gorgon items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "marksman:%1-3%"
+      - "angelic:%1-5%"
+      - "cactus:%1-2%"
+      - "dodge:%1-5%"
+      - "tank:%1-4%"
+      - "deathbringer:%1-3%"
+      - "obsidianshield:1"
+      - 'planetarydeathbringer:%1-3%'
+
+  boots:
+    name: '&2&lVenomous Talons'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&a&oTalons of corrupted God'
+      - '&a&ostrong and sharp, concrete'
+      - '&a&oand even iron get crushed'
+      - ''
+      - '&2&lGORGON SET BONUS'
+      - '&a&l* &a Caustic Manifestation (Chance to Disables enemy Buffs)'
+      - '&a&l* &a Epitome of Malevolence (Chance to Give Increased Slow and Poison)'
+      - '&a&l* &a Lethal Poison Bow Damage'
+      - '&a&l* &6 Immune to Poison'
+      - '&7&o(Requires all 4 Gorgon items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "marksman:%1-4%"
+      - "armored:%1-4%"
+      - "gears:%1-3%"
+      - "tank:%1-4%"
+      - "springs:%1-3%"
+      - "rocketescape:%1-2%"
+      - 'etherealdodge:%1-5%'
+events:
+  DEFENSE:
+    cooldown: 20
+    chance: 20
+    effects:
+      - 'CURE_PERMANENT:REGENERATION <aoe> radius=16 target=damageable </aoe>'
+      - 'CURE_PERMANENT:SPEED <aoe> radius=16 target=damageable </aoe>'
+      - 'CURE_PERMANENT:DAMAGE_RESISTANCE <aoe> radius=16 target=damageable </aoe>'
+      - 'CURE_PERMANENT:JUMP_BOOST <aoe> radius=16 target=damageable </aoe>'
+      - 'CURE_PERMANENT:STRENGTH <aoe> radius=16 target=damageable </aoe>'
+      - 'CURE_PERMANENT:SATURATION <aoe> radius=16 target=damageable </aoe>'
+      - 'POTION:SLOW:5:100 <aoe> radius=16 target=damageable </aoe>'
+      - 'MESSAGE: &f&l**&4&lTREMBLE&f&l** <aoe> radius=16 target=damageable </aoe>'
+      - 'POTION:POISON:5:100 <aoe> radius=16 target=damageable </aoe>'
+      - 'ADD_HARM:2 <aoe> radius=16 target=damageable </aoe>'
+      - 'WAIT:10'
+      - 'ADD_HARM:2 <aoe> radius=16 target=damageable </aoe>'
+      - 'WAIT:10'
+      - 'ADD_HARM:2 <aoe> radius=16 target=damageable </aoe>'
+      - 'WAIT:10'
+      - 'ADD_HARM:2 <aoe> radius=16 target=damageable </aoe>'
+      - 'CURE:POISON %victim%'
+  BOW:
+    cooldown: 5
+    chance: 30
+    effects:
+      - 'POTION:POISON:9:400 %victim%'
+      - 'MESSAGE:&f&l**&2&lVILE &f&l** %victim%'
+      - 'WAIT:10'
+      - 'ADD_HARM:2 %victim%'
+      - 'WAIT:10'
+      - 'ADD_HARM:2 %victim%'
+      - 'WAIT:10'
+      - 'ADD_HARM:2 %victim%'

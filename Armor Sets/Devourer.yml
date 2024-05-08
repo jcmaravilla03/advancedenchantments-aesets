@@ -1,0 +1,192 @@
+# Advanced Sets
+# These sets are fully creatable, to create your own simply copy this file, rename it and edit it however you want!
+
+# ** Set Materials:
+# * LEATHER (change-able color)
+# * IRON
+# * GOLD
+# * CHAIN
+# * DIAMOND
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for sets.
+
+#  ** Set Events
+#    Change upon what event should sets trigger
+#    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn)
+#    - ATTACK : Set Event run only when attacking another player
+#    - DEFENSE : Set Event run only when being attacked
+#    - DEFENSE_BOW : Set Event run only when player gets shot by a bow
+#    - MINING : Gives effects when block is mined
+#    - ATTACK_MOB : Gives effects when player attacks mob
+#    - KILL_MOB : Effects given when attacked mob is killed
+#    - BOW : Effects given when player is shot by another player
+#    - KILL_PLAYER : Effects given when attacker kills a player
+#    - DEATH : Runs when player dies due to another player.
+#    - RIGHT_CLICK : Runs when player right clicks held item
+#    - BOW_MOB : Effects given when mob is shot by player
+#    - FIRE : Effects given when player is on fire
+#    - EXPLOSION : Effects given when player gets hit by explosion
+#    - SWING : Enchant runs when player swings
+#    - FALL_DAMAGE : Set Event runs when player takes fall damage
+#    - DEFENSE_MOB : Set Event runs when mob attacks a player
+#    - SHIFT : Set Event runs when player toggles crouching (shifts)
+#    - ITEM_BREAK : Set Event runs when player toggles crouching (shifts)
+#    - CATCH_FISH : Set Event runs when player catches a fish
+# Set Events & Enchant types are intercompatible together
+
+# ** Creating set effects, this explains the system
+#events:
+#  <any of the effects from the list>:
+#    chance: <chance of effects activating, 1-100> (Optional)
+#    cooldown: <cooldown period after effects activate, in seconds> (Optional)
+#    effects: <effects are available in enchantments.yml>
+#    # E.g.: - 'INCREASED_DAMAGE:10'
+
+name: '&5&lDevourer'
+material: NETHERITE
+settings:
+  equipped:
+    - '&a&l(!) &aYou have been cursed by the Devourer Armor Set!'
+  unequipped:
+    - '&c&l(!) &cThe curse of relentless hunger has been lifted!'
+items:
+  helmet:
+    name: '&5&lEtched of Helmet'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&5&oCountless souls have already wore this'
+      - '&5&oLegend says that those who wore this'
+      - '&5&ogoes insane with relentless hunger'
+      - ''
+      - '&5&lDEVOURER SET BONUS'
+      - '&5&l* &fEach effect of the set takes Durability.'
+      - '&5&l* &fPredator Sense (Chance of Gears 5 on the user)'
+      - '&5&l* &fPredator Sense (Chance of Regeneration on the user)'
+      - '&5&l* &fPredator Sense (Glowing on the enemy)'
+      - '&5&l* &fImmune to Poison'
+      - '&5&l* &fCorrupted Body (Chance of hunger, poison and slow on the enemy'
+      - '&7&o(Requires all four Devourer items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "deathbringer:%1-3%"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "drunk:%1-4%"
+      - "heavy:%1-5%"
+      - "dodge:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "implants:%1-3%"
+      - "hardened:%1-3%"
+  chestplate:
+    name: '&5&lBroken Chestplate'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&5&oYou can see the hole in the stomach part of the chestplate'
+      - '&5&oripped apart by the wearer wanting to take apart his stomach'
+      - ''
+      - '&5&lDEVOURER SET BONUS'
+      - '&5&l* &fEach effect of the set takes Durability.'
+      - '&5&l* &fPredator Sense (Chance of Gears 5 on the user)'
+      - '&5&l* &fPredator Sense (Chance of Regeneration on the user)'
+      - '&5&l* &fPredator Sense (Glowing on the enemy)'
+      - '&5&l* &fImmune to Poison'
+      - '&5&l* &fCorrupted Body (Chance of hunger, poison and slow on the enemy'
+      - '&7&o(Requires all four Devourer items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "overload:%1-3%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "arrowdeflect:%1-4%"
+      - "hardened:%1-3%"
+      - "gluttony:%1-1%"
+  leggings:
+    name: '&5&lLeggings of the hungry '
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&5&oNormal leggings, Itchy filled with moss and plague'
+      - ''
+      - '&5&lDEVOURER SET BONUS'
+      - '&5&l* &fEach effect of the set takes Durability.'
+      - '&5&l* &fPredator Sense (Chance of Gears 5 on the user)'
+      - '&5&l* &fPredator Sense (Chance of Regeneration on the user)'
+      - '&5&l* &fPredator Sense (Glowing on the enemy)'
+      - '&5&l* &fImmune to Poison'
+      - '&5&l* &fCorrupted Body (Chance of hunger, poison and slow on the enemy'
+      - '&7&o(Requires all four Devourer items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "deathbringer:%1-3%"
+      - "clarity:%1-3%"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "obsidianshield:1"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "hardened:%1-3%"
+      - "cactus:%1-2%"
+  boots:
+    name: '&5&lUnpaired Boot'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&5&oThe last wearer said to  lost the other piece of the boots'
+      - '&5&orunning away from his pursuers bearing grudge'
+      - '&5&o to the people who wants to punish him for eating  a fellow villager'
+      - ''
+      - '&5&lDEVOURER SET BONUS'
+      - '&5&l* &fEach effect of the set takes Durability.'
+      - '&5&l* &fPredator Sense (Chance of Gears 5 on the user)'
+      - '&5&l* &fPredator Sense (Chance of Regeneration on the user)'
+      - '&5&l* &fPredator Sense (Glowing on the enemy)'
+      - '&5&l* &fImmune to Poison'
+      - '&5&l* &fCorrupted Body (Chance of hunger, poison and slow on the enemy'
+      - '&7&o(Requires all four Devourer items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "deathbringer:%1-3%"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "gears:%1-3%"
+      - "metaphysical:%1-4%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "hardened:%1-3%"
+      - "rocketescape:%1-3%"
+      - "springs:%1-3%"
+events:
+  ATTACK:
+    chance: 80
+    cooldown: 2
+    effects:
+      - 'POTION:REGENERATION:2:100 %attacker%'
+      - 'POTION:SPEED:4:140 %attacker%'
+      - 'POTION:GLOWING:0:600 %victim%'
+      - 'ADD_DURABILITY:8 %attacker%'
+      - 'MESSAGE: &f&l**&5&lKILL EAT PREY&f&l ** %attacker% '
+  DEFENSE:
+    chance: 100
+    cooldown: 2
+    effects:
+      - 'POTION:HUNGER:15:600 %attacker%'
+      - 'POTION:POISON:3:100 %attacker%'
+      - 'POTION:SLOW:3:100 %attacker%'
+      - 'ADD_DURABILITY:5 %victim%'
+      - 'CURE:SLOW %victim%'

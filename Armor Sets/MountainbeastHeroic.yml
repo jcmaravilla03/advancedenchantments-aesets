@@ -1,0 +1,192 @@
+# Advanced Sets
+# These sets are fully creatable, to create your own simply copy this file, rename it and edit it however you want!
+
+# ** Set Materials:
+# * LEATHER (change-able color)
+# * IRON
+# * GOLD
+# * CHAIN
+# * DIAMOND
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for sets.
+
+#  ** Set Events
+#    Change upon what event should sets trigger
+#    - EFFECT_STATIC : Gives permanent potion effect (as long as armor piece is worn)
+#    - ATTACK : Set Event run only when attacking another player
+#    - DEFENSE : Set Event run only when being attacked
+#    - DEFENSE_BOW : Set Event run only when player gets shot by a bow
+#    - MINING : Gives effects when block is mined
+#    - ATTACK_MOB : Gives effects when player attacks mob
+#    - KILL_MOB : Effects given when attacked mob is killed
+#    - BOW : Effects given when player is shot by another player
+#    - KILL_PLAYER : Effects given when attacker kills a player
+#    - DEATH : Runs when player dies due to another player.
+#    - RIGHT_CLICK : Runs when player right clicks held item
+#    - BOW_MOB : Effects given when mob is shot by player
+#    - FIRE : Effects given when player is on fire
+#    - EXPLOSION : Effects given when player gets hit by explosion
+#    - SWING : Enchant runs when player swings
+#    - FALL_DAMAGE : Set Event runs when player takes fall damage
+#    - DEFENSE_MOB : Set Event runs when mob attacks a player
+#    - SHIFT : Set Event runs when player toggles crouching (shifts)
+#    - ITEM_BREAK : Set Event runs when player toggles crouching (shifts)
+#    - CATCH_FISH : Set Event runs when player catches a fish
+# Set Events & Enchant types are intercompatible together
+
+# ** Creating set effects, this explains the system
+#events:
+#  <any of the effects from the list>:
+#    chance: <chance of effects activating, 1-100> (Optional)
+#    cooldown: <cooldown period after effects activate, in seconds> (Optional)
+#    effects: <effects are available in enchantments.yml>
+#    # E.g.: - 'INCREASED_DAMAGE:10'
+
+name: '&b&lMountain Beast Armor'
+material: LEATHER
+settings:
+  equipped:
+    - '&a&l(!) &aYou have become the BeastJ!'
+  unequipped:
+    - '&c&l(!) &cYou have lost the beast soul!'
+items:
+  helmet:
+    name: '&b&lOzone peak'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&bThe powerful headpiece that.'
+      - '&bshields the wearer from magic.'
+      - ''
+      - '&b&lOZONE SET BONUS'
+      - '&b* Beast Body (Chance of Regen and 30%Damage Reduce).'
+      - '&b* Mark of the Beast AE.'
+      - '&b* Thunder Clap 1st Slash (Lightning Damage and Speed).'
+      - '&7&o(Requires all 4 Mountain Beast items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "hardened:%1-3%"
+      - "angelic:%1-5%"
+      - "tank:%1-4%"
+      - "dodge:%1-5%"
+      - "alienimplants:%1-3%"
+      - "clarity:%1-3%"
+      - "deathpact:%1-2%"
+  chestplate:
+    name: '&b&lRoaring Crest'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&bThe powerful headpiece that.'
+      - '&bshields the wearer from magic.'
+      - ''
+      - '&b&lOZONE SET BONUS'
+      - '&b* Beast Body (Chance of Regen and 30%Damage Reduce).'
+      - '&b* Mark of the Beast AE.'
+      - '&b* Thunder Clap 1st Slash (Lightning Damage and Speed).'
+      - '&7&o(Requires all 4 Mountain Beast items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "godlyoverload:%1-3%"
+      - "deathbringer:%1-3%"
+      - "armored:%1-4%"
+      - "fat:%1-6%"
+      - "cactus:%1-2%"
+      - "heavy:%1-5%"
+      - "angelic:%1-5%"
+      - "tank:%1-4%"
+  leggings:
+    name: '&b&lSteep Slope'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&bAwarded by those who won a hundred conflicts'
+      - ''
+      - '&b&lOZONE SET BONUS'
+      - '&b* Beast Body (Chance of Regen and 30%Damage Reduce).'
+      - '&b* Mark of the Beast AE.'
+      - '&b* Thunder Clap 1st Slash (Lightning Damage and Speed).'
+      - '&7&o(Requires all 4 Mountain Beast items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "obsidianshield:1"
+      - "guardians:%1-3%"
+      - "creeperarmor:%1-3%"
+      - "judgement:%1-5%"
+      - "plaguecarrier:%1-5%"
+      - "spirits:%1-10%"
+  boots:
+    name: '&b&lSturdy Base'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&bAble to see through enemy strategy and tactic.'
+      - ''
+      - '&b&lOZONE SET BONUS'
+      - '&b* Beast Body (Chance of Regen and 30%Damage Reduce).'
+      - '&b* Mark of the Beast AE.'
+      - '&b* Thunder Clap 1st Slash (Lightning Damage and Speed).'
+      - '&7&o(Requires all 4 Mountain Beast items.)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "enderwalker:%1-3%"
+      - "gears:%1-3%"
+      - "tank:%1-4%"
+      - "dodge:%1-5%"
+      - "metaphysical:%1-4%"
+      - "judgement:%1-5%"
+      - "angelic:%1-5%"
+      - "jellylegs:%1-3%"
+      - "mightycactus:%1-2%"
+events:
+  ATTACK:
+    chance: 35
+    cooldown: 15
+    effects:
+      - 'TELEPORT_BEHIND %victim%'
+      - 'MESSAGE:&b&l*** &a&lTHUNDER &f&lCLAP &b&l*** %attacker%'
+      - LIGHTNING %victim%
+      - 'WAIT:5'
+      - 'PULL_AWAY:3.0 %victim%'
+      - LIGHTNING %victim%
+      - DAMAGE_ARMOR:10 %victim%
+      - 'ADD_HARM:<random number>4-6</random number> %victim%'
+      - 'POTION:SPEED:2:100 %attacker'
+  DEFENSE:
+    chance: 45
+    cooldown: 12
+    effects:
+      - 'MESSAGE:&c&l* BEAST MARK [&74s&c&l] * %victim%'
+      - 'POTION:REGENERATION:1:120 %victim%'
+      - 'POTION:WEAKNESS:2:600 %attacker%'
+      - 'REMOVE_DAMAGE:50 %victim%'
+  ATTACK_MOB:
+    chance: 35
+    cooldown: 15
+    effects:
+      - 'TELEPORT_BEHIND %victim%'
+      - 'MESSAGE:&b&l*** &a&lTHUNDER &f&lCLAP &b&l*** %attacker%'
+      - LIGHTNING %victim%
+      - 'WAIT:5'
+      - 'PULL_AWAY:3.0 %victim%'
+      - LIGHTNING %victim%
+      - 'ADD_HARM:<random number>4-6</random number> %victim%'
+      - 'POTION:SPEED:2:100 %attacker'
+  DEFENSE_MOB:
+    chance: 45
+    cooldown: 12
+    effects:
+      - 'MESSAGE:&c&l* BEAST MARK [&74s&c&l] * %victim%'
+      - 'POTION:REGENERATION:1:120 %victim%'
+      - 'POTION:WEAKNESS:2:600 %attacker%'
+      - 'REMOVE_DAMAGE:50 %victim%'
