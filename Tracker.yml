@@ -1,6 +1,6 @@
 defensetracker:
   display: '%group-color%Defense Tracker'
-  description: "Alam mo ba tracker? yan yung pag marami ka kills, tracker ka"
+  description: "Damage Tracker for AE game dev testers"
   applies-to: 'Armors'
   type: 'DEFENSE;DEFENSE_BOW'
   group: 'ANCIENT'
@@ -17,7 +17,7 @@ defensetracker:
 
 attacktracker:
   display: '%group-color%Attack Tracker'
-  description: "Alam mo ba tracker? yan yung driver ng vehicle na 8 wheels"
+  description: "Damage Tracker for AE game dev testers"
   applies-to: 'Weapons'
   type: 'ATTACK;BOW'
   group: 'ANCIENT'
@@ -40,7 +40,7 @@ attacktracker:
 Lifesteal Tracker Try        
 attacktracker:
   display: '%group-color%Attack Tracker'
-  description: "Developers Bread and Butter in Balancing"
+  description: "Damage Tracker for AE game dev testers"
   applies-to: 'Weapons'
   type: 'ATTACK'
   group: 'ANCIENT'
