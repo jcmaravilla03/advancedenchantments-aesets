@@ -1,0 +1,56 @@
+metaphysical:
+  display: '%group-color%Metaphysical'
+  description: "A chance to be immune of Slowness.\nAt max level, you will only be\naffected approx. 50% of the time."
+  applies-to: 'Boots'
+  type: 'DEFENSE'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      chance: 20
+      effects:
+        - 'CURE:SLOW %victim%'
+    2:
+      chance: 30
+      effects:
+        - 'CURE:SLOW %victim%'
+    3:
+      chance: 40
+      effects:
+        - 'CURE:SLOW %victim%'
+    4:
+      chance: 50
+      effects:
+        - 'CURE:SLOW %victim%'
+polymorphicmetaphysical:
+  display: '%group-color%Polymorphic Metaphysical'
+  description: "A chance to be immune of Slowness.\nAt max level, you will only be\naffected approx. 10% of the time.\nRequires Metaphysical IV to apply."
+  applies-to: 'Boots'
+  type: 'DEFENSE'
+  group: 'HEROIC'
+  settings:
+    required-enchants:
+      - 'metaphysical:4'
+    removed-enchants:
+      - 'metaphysical'
+    removeable: true
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      chance: 30
+      effects:
+        - 'CURE:SLOW %victim%'
+    2:
+      chance: 60
+      effects:
+        - 'CURE:SLOW %victim%'
+    3:
+      chance: 75
+      effects:
+        - 'CURE:SLOW %victim%'
+    4:
+      chance: 90
+      effects:
+        - 'CURE:SLOW %victim%

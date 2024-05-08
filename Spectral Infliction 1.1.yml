@@ -1,0 +1,99 @@
+spectralinfliction:
+  display: '%group-color%Spectral Infliction'
+  description: "Manifest an aura for their inevitable demise, Gives glowing effect\nwhen your target is at low HP and silences their defenses\nbut deal significantly lower damage.\nRequires Infliction IV\nReaze is working on this"
+  applies-to: 'Bow'
+  type: 'BOW'
+  settings:
+    not-applyable-with:
+      - 'eternalsusanoo'
+      - 'hook'
+    removeable: false
+  group: 'ANCIENT'
+  applies:
+    - BOW
+  levels:
+    1:
+      chance: 12
+      cooldown: 9
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:140 %victim%'
+        - 'DISABLE_ACTIVATION:heavy:3 %victim%'
+        - 'DISABLE_ACTIVATION:megaheavy:3 %victim%'
+        - 'DISABLE_ACTIVATION:eternalalloy:3 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &8Spectral Infliction &7ractivated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &8Spectral Infliction &7received. %victim%'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+    2:
+      chance: 14
+      cooldown: 8
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:140 %victim%'
+        - 'DISABLE_ACTIVATION:heavy:4 %victim%'
+        - 'DISABLE_ACTIVATION:megaheavy:4 %victim%'
+        - 'DISABLE_ACTIVATION:eternalalloy:4 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &8Spectral Infliction &7ractivated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &8Spectral Infliction &7received. %victim%'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+    3:
+      chance: 16
+      cooldown: 7
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:140 %victim%'
+        - 'DISABLE_ACTIVATION:heavy:5 %victim%'
+        - 'DISABLE_ACTIVATION:megaheavy:5 %victim%'
+        - 'DISABLE_ACTIVATION:eternalalloy:5 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &8Spectral Infliction &7ractivated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &8Spectral Infliction &7received. %victim%'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+    4:
+      chance: 18
+      cooldown: 6
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:140 %victim%'
+        - 'DISABLE_ACTIVATION:heavy:6 %victim%'
+        - 'DISABLE_ACTIVATION:megaheavy:6 %victim%'
+        - 'DISABLE_ACTIVATION:eternalalloy:6 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &8Spectral Infliction &7ractivated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &8Spectral Infliction &7received. %victim%'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+    5:
+      chance: 20
+      cooldown: 5
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:140 %victim%'
+        - 'DISABLE_ACTIVATION:heavy:7 %victim%'
+        - 'DISABLE_ACTIVATION:megaheavy:7 %victim%'
+        - 'DISABLE_ACTIVATION:eternalalloy:7 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &8Spectral Infliction &7ractivated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &8Spectral Infliction &7received. %victim%'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'
+        - 'WAIT:20'
+        - 'DECREASE_DAMAGE:50 %attacker%'

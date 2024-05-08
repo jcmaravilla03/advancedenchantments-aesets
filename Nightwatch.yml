@@ -1,0 +1,143 @@
+name: '&9&lNightwatch of the Monument Armor'
+material: NETHERITE
+settings:
+  equipped:
+    - '&9&l(!) &9You have activated the Nightwatch of the Monument Set!'
+  unequipped:
+    - '&c&l(!) &9You have deactivated the Nightwatch of the Monument Set!'
+items:
+  helmet:
+    name: '&9&lNightwatch Perciever'
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&9&oThe Nightwatch who is wary'
+      - '&9&okills deviants instantly'
+      - ''
+      - '&9&lNIGHTWATCH SET BONUS'
+      - '&9&l* &9Amphibious Abode(Damage buff and Absorption while on water)'
+      - '&9&l* &9Gears IV'
+      - '&9&l* &9Takes more damage while on fire'
+      - '&9&l* &9Axe deals 100% more damage to you'
+      - '&7&o(Requires all four nightwatch armor items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "deathbringer:%1-3%"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "drunk:%1-4%"
+      - "heavy:%1-5%"
+      - "dodge:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "implants:%1-3%"
+      - "hardened:%1-3%"
+      - "marksman:%1-4%"
+  chestplate:
+    name: "&1&lNightwatch's Sustainer"
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&9&oThe Nightwatch made vigorous'
+      - '&9&oin order to server purpose'
+      - ''
+      - '&9&lNIGHTWATCH SET BONUS'
+      - '&9&l* &9Amphibious Abode(Damage buff and Absorption while on water)'
+      - '&9&l* &9Gears IV'
+      - '&9&l* &9Takes more damage while on fire'
+      - '&9&l* &9Axe deals 100% more damage to you'
+      - '&7&o(Requires all four nightwatch armor items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "overload:%1-3%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "arrowdeflect:%1-4%"
+      - "marksman:%1-4%"
+      - "hardened:%1-3%"
+  leggings:
+    name: "&1&lNightwatch's Straddler"
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&9&oThe Nightwatch are stationed'
+      - '&9&oby those who are never mentioned'
+      - ''
+      - '&9&lNIGHTWATCH SET BONUS'
+      - '&9&l* &9Amphibious Abode(Damage buff and Absorption while on water)'
+      - '&9&l* &9Gears IV'
+      - '&9&l* &9Takes more damage while on fire'
+      - '&9&l* &9Axe deals 100% more damage to you'
+      - '&7&o(Requires all four nightwatch armor items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "deathbringer:%1-3%"
+      - "clarity:%1-3%"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "obsidianshield:1"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "marksman:%1-4%"
+      - "hardened:%1-3%"
+      - "cactus:%1-2%"
+  boots:
+    name: "&1&lNightwatch's Diver"
+    # Custom Model Data (for 1.13+ servers with custom item packs)
+    # Set custom model data integer
+    customModelData: 0
+    lore:
+      - '&9&oThe Nightwatch treads'
+      - '&9&oeven the deepest of depths'
+      - ''
+      - '&9&lNIGHTWATCH SET BONUS'
+      - '&9&l* &9Amphibious Abode(Damage buff and Absorption while on water)'
+      - '&9&l* &9Gears IV'
+      - '&9&l* &9Takes more damage while on fire'
+      - '&9&l* &9Axe deals 100% more damage to you'
+      - '&7&o(Requires all four nightwatch armor items)'
+    enchants: # Supports AdvancedEnchantments CE
+      - "protection:4"
+      - "unbreaking:3"
+      - "deathbringer:%1-3%"
+      - "enlighted:%1-3%"
+      - "armored:%1-4%"
+      - "gears:%1-3%"
+      - "metaphysical:%1-4%"
+      - "heavy:%1-5%"
+      - "tank:%1-4%"
+      - "angelic:%1-5%"
+      - "marksman:%1-4%"
+      - "hardened:%1-3%"
+      - "rocketescape:%1-3%"
+      - "springs:%1-3%"
+events:
+  EFFECT_STATIC:
+    chance: 100
+    effects:
+      - 'POTION:SPEED:4'
+  ATTACK:
+    chance: 10
+    cooldown: 5
+    condition: '%is under water% = TRUE : %continue%'
+    effects:
+        - 'DOUBLE_DAMAGE'
+        - 'POTION:ABSORPTION:2:100 %attacker%'
+        - 'MESSAGE:&4&l** Torrent &d&l**%attacker%'
+  DEFENSE:
+    chance: 100
+    condition:
+        - '%victim is on fire% = true : %allow%'
+    effects:
+        - 'INCREASE_DAMAGE:<random number>20-50</random number> %attacker%'
+        - 'MESSAGE:&4&l** Burnt &d&l**%attacker%'

@@ -1,0 +1,24 @@
+defieddeclaration:    
+  display: '%group-color% Defied Declaration'   
+  description: 'Heal all debuff when given glowing effect'    
+  applies-to: 'Armor'  
+  type: 'DEFENSE;DEFENSE_BOW'
+  group: 'HEROIC'
+  applies:
+    - ALL_CHESTPLATE
+  levels:   
+    1:    
+      chance: 100 
+      cooldown: 60 
+      condition: 
+        - '%victim has potion effect GLOWING% = true : %allow%'
+      effects:
+        - 'CURE:SLOW %victim%'
+        - 'CURE:CONFUSION %victim%'
+        - 'CURE:BLINDNESS %victim%'
+        - 'CURE:POISON %victim%'
+        - 'CURE:WITHER %victim%'
+        - 'CURE:HUNGER %victim%'
+        - 'CURE:WEAKNESS %victim%'
+        - 'CURET:SLOW_DIGGING %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &eRigid Confute &7activated. %victim%'

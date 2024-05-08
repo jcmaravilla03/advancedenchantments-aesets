@@ -1,0 +1,82 @@
+disarray:
+  display: '%group-color%Disarray'
+  description: "TEST AE Shuffles their hotbar 3 times with a second interval each\n&mWorks againts player with bow in their hand.\n&4&lReaze"
+  applies-to: 'Swords'
+  type: 'ATTACK'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_SWORD
+  levels:
+    1:
+      chance: 2
+      cooldown: 120
+      #condition: '%victim is holding% = BOW : %allow%'
+      effects:
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &6Disarrayed%victim%'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+    2:
+      chance: 4
+      cooldown: 120
+      #condition: '%victim is holding% = BOW : %allow%'
+      effects:
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &6Disarrayed%victim%'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+    3:
+      chance: 99 #should be 8, testing for now
+      cooldown: 10 #should be 120, testing for now
+      #condition: '%victim is holding% = BOW : %allow%'
+      effects:
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &6Disarrayed%victim%'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+
+disarray:
+  display: '%group-color%Disarray'
+  description: "TEST AE Shuffles their hotbar 3 times with a second interval each.\n&4&lReaze"
+  applies-to: 'Swords'
+  type: 'ATTACK'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_SWORD
+  levels:
+    1:
+      chance: 2
+      cooldown: 120
+      effects:
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &6Disarrayed%victim%'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+    2:
+      chance: 4
+      cooldown: 120
+      effects:
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &6Disarrayed%victim%'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+    3:
+      chance: 99 #should be 8, testing for now
+      cooldown: 10 #should be 120, testing for now
+      effects:
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &6Disarrayed%victim%'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'
+        - 'WAIT:30'
+        - 'RANDOMIZE_HOTBAR %victim%'

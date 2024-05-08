@@ -1,0 +1,74 @@
+# « Example configuration »
+runner:
+  display: '%group-color%Runner'
+  description: 'Runner'
+  applies-to: 'Boots'
+  type: 'EFFECT_STATIC'
+  group: 'ELITE'
+  applies:
+    - ALL_BOOTS
+      settings:
+    required-enchants:
+      - 'gears:3'
+      - 'antigravity:3' 
+      - 'rocketescape:3'
+    removed-enchants:
+      - 'gears:3'
+      - 'antigravity:3' 
+      - 'rocketescape:3'
+  levels:
+    1:  
+      effects:
+        - 'POTION:SPEED:0'
+        - 'POTION:JUMP:2'
+      chance: 
+      cooldown: 
+      condition:
+        - '%victim health% > 6 : %stop%'
+      effects:
+        - 'BOOST:30 %victim%'
+        - 'POTION:SPEED:0'
+        - 'POTION:JUMP:2'
+    2:
+      chance: 
+      cooldown: 
+      condition:
+        - '%victim health% > 6 : %stop%'
+      effects:
+        - 'BOOST:45 %victim%'
+        - 'POTION:SPEED:1'
+        - 'POTION:JUMP:3'
+    3:
+      chance: 
+      cooldown: 
+      condition:
+        - '%victim health% > 6 : %stop%'
+      effects:
+        - 'BOOST:50 %victim%'
+        - 'POTION:SPEED:2'
+        - 'POTION:JUMP:4'
+
+godlyoverload:
+  display: '%group-color%Godly Overload'
+  description: "Heroic Enchantment. A very large\npermanent increase in hearts. Requires\nOverload III enchant on item to apply."
+  applies-to: 'Armor'
+  type: 'EFFECT_STATIC'
+  group: 'HEROIC'
+  settings:
+    required-enchants:
+      - 'overload:3'
+    removed-enchants:
+      - 'overload'
+    removeable: false
+  applies:
+    - ALL_ARMOR
+  levels:
+    1:
+      effects:
+        - 'POTION:HEALTH_BOOST:2'
+    2:
+      effects:
+        - 'POTION:HEALTH_BOOST:3'
+    3:
+      effects:
+        - 'POTION:HEALTH_BOOST:4'

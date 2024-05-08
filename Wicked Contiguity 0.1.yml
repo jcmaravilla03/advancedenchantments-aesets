@@ -1,0 +1,56 @@
+wickedcontiguity:
+  display: '%group-color%Wicked Contiguity'
+  description: "Chance of dealing poison, weakness and wither damage to your target and adding regeneration to yourself"
+  applies-to: 'Armor'
+  type: 'DEFENSE'
+  group: 'HEROIC'
+  applies:
+    - ALL_ARMOR
+      settings:
+    required-enchants:
+      - 'judgement:5'
+      - 'unholy:5' 
+    removed-enchants:
+      - 'judgement:5'
+      - 'unholy:5' 
+  levels:
+    1:
+      chance: 4
+      cooldown: 30
+      effects:
+        - 'POTION:POISON:0:100 %attacker%'
+        - 'POTION:WITHER:0:60 %attacker%'
+        - 'POTION:WEAKNESS:0:100 %attacker%'
+        - 'POTION:REGENERATION:0:100 %victim%'
+    2:
+      chance: 6
+      cooldown: 30
+      effects:
+        - 'POTION:POISON:0:100 %attacker%'
+        - 'POTION:WITHER:1:60 %attacker%'
+        - 'POTION:WEAKNESS:0:5 %attacker%'
+        - 'POTION:REGENERATION:0:100 %victim%'
+    3:
+      chance: 8
+      cooldown: 30
+      effects:
+        - 'POTION:POISON:0:100 %attacker%'
+        - 'POTION:WITHER:1:60 %attacker%'
+        - 'POTION:WEAKNESS:0:100 %attacker%'
+        - 'POTION:REGENERATION:0:100 %victim%'
+    4:
+      chance: 10
+      cooldown: 30
+      effects:
+        - 'POTION:POISON:0:100 %attacker%'
+        - 'POTION:WITHER:1:60 %attacker%'
+        - 'POTION:WEAKNESS:1:100 %attacker%'
+        - 'POTION:REGENERATION:1:60 %victim%'
+    5:
+      chance: 13
+      cooldown: 35
+      effects:
+        - 'POTION:POISON:0:100 %attacker%'
+        - 'POTION:WITHER:1:60 %attacker%'
+        - 'POTION:WEAKNESS:1:100 %attacker%'
+        - 'POTION:REGENERATION:1:100 %victim%'

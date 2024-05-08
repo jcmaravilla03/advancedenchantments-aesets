@@ -1,0 +1,69 @@
+soulsuck: 
+  display: '%group-color%Soul Suck'
+  description: "When the attacker has Divine Immolation or Rogue in hand, you steal soul from them.\nReaze is working on this"
+  applies-to: 'Armor'
+  type: 'DEFENSE'
+  group: 'ANCIENT' #Should be MASTERY
+  applies:
+    - ALL_CHESTPLATE
+  levels:
+    1:
+      chance: 27
+      cooldown: 9
+      condition:
+        '%victim has enchantment in hand of divineimmolation% = true or %victim has enchantment in hand of rogue% = true : %allow%'
+      effects: 
+        - 'REMOVE_SOULS:50 %attacker%'
+        - 'REMOVE_SOULS:-50 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &dMighty Cleave &7activated. %victim%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &dMighty Cleave &7received. %attacker%'
+    2:
+      chance: 30
+      cooldown: 8
+      condition:
+        '%victim has enchantment in hand of divineimmolation% = true or %victim has enchantment in hand of rogue% = true : %allow%'
+      effects: 
+        - 'REMOVE_SOULS:50 %attacker%'
+        - 'REMOVE_SOULS:-50 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &dMighty Cleave &7activated. %victim%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &dMighty Cleave &7received. %attacker%'
+    3:
+      chance: 33
+      cooldown: 7
+      condition:
+        '%victim has enchantment in hand of divineimmolation% = true or %victim has enchantment in hand of rogue% = true : %allow%'
+      effects:
+        - 'REMOVE_SOULS:50 %attacker%'
+        - 'REMOVE_SOULS:-50 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &dMighty Cleave &7activated. %victim%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &dMighty Cleave &7received. %attacker%'
+    4:
+      chance: 35
+      cooldown: 6
+      condition:
+        '%victim has enchantment in hand of divineimmolation% = true or %victim has enchantment in hand of rogue% = true : %allow%'
+      effects: 
+        - 'REMOVE_SOULS:50 %attacker%'
+        - 'REMOVE_SOULS:-50 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &dMighty Cleave &7activated. %victim%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &dMighty Cleave &7received. %attacker%'
+    5:
+      chance: 37
+      cooldown: 5
+      condition:
+        '%victim has enchantment in hand of divineimmolation% = true or %victim has enchantment in hand of rogue% = true : %allow%'
+      effects: 
+        - 'REMOVE_SOULS:50 %attacker%'
+        - 'REMOVE_SOULS:-50 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &dMighty Cleave &7activated. %victim%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &dMighty Cleave &7received. %attacker%'
+    6:
+      chance: 40
+      cooldown: 4
+      condition:
+        '%victim has enchantment in hand of divineimmolation% = true or %victim has enchantment in hand of rogue% = true : %allow%'
+      effects:
+        - 'REMOVE_SOULS:50 %attacker%'
+        - 'REMOVE_SOULS:-50 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &dMighty Cleave &7activated. %victim%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &dMighty Cleave &7received. %attacker%'

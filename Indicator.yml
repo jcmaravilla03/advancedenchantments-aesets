@@ -1,0 +1,12 @@
+version:
+  display: '%group-color%Version :'
+  description: "Date:1/20/2020 \nTime: \nUser:Reaze"
+  applies-to: 'Secret'
+  type: 'BOW'
+  group: 'Common'
+  applies:
+    - BOW
+  levels:
+    1:
+      effects:
+        - 'WAIT:100'

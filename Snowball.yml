@@ -1,0 +1,25 @@
+# « Example configuration »
+A:
+  display: '%group-color%What mate?'
+  description: "Hud used confuse, it was very effective"
+  applies-to: 'Axe'
+  type: 'KILL_PLAYER'
+  group: 'SIMPLE'
+  applies:
+    - ALL_AXE
+ levels:
+    1:
+      chance: 20
+      effects:
+        - 'BLOOD %victim%'
+        - 'INCREASE_DAMAGE:<random number>30-50</random number> %attacker%'
+    2:
+      chance: 40
+      effects:
+        - 'BLOOD %victim%'
+        - 'INCREASE_DAMAGE:<random number>30-50</random number> %attacker%'
+    3:
+      chance: 60
+      effects:
+        - 'BLOOD %victim%'
+        - 'INCREASE_DAMAGE:<random number>30-50</random number> %attacker%'

@@ -1,0 +1,32 @@
+# « Example configuration »
+
+example:    
+
+  display: '%group-color%Example'   
+  description: 'Has a chance to heal when on low hearts'    
+
+  applies-to: 'Armor'  
+  type: 'DEFENSE'   
+  group: 'COMMON'   
+
+  settings:
+    required-enchants:
+      - 'example:(level)'
+      - 'gears:3'
+    not-applyable-with:
+      - 'frozen'
+
+  applies:   
+    - ALL_ARMOR   
+
+  levels:   
+    1:    
+      chance: 30   
+      cooldown: 5 
+      condition: 
+	- '%victim health% > 5 : %stop%'   
+      effects:    
+	- 'MESSAGE:&6&l** Lmao what ** %victim%'
+        - 'ADD_HEALTH:2 %victim%'
+	- 'WAIT:100'   
+	- 'PLAY_SOUND:ANVIL_DROP' 

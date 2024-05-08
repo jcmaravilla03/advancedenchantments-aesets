@@ -1,0 +1,76 @@
+superherolanding:
+  display: '%group-color%Superhero Landing'
+  description: "Totally impractical and very hard on your knees, Your falling damage is amplified\nbut ricochet all players within impact, 600 souls per use.\nIncompatible with Jelly Legs\nReaze is working on this"
+  applies-to: 'Boots'
+  type: 'FALL_DAMAGE'
+  settings:
+    not-applyable-with:
+      - 'jellylegs'
+  group: 'ANCIENT' #should be SOUL
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      chance: 65
+      cooldown: 150
+      souls: 600
+      effects:
+        - 'ADD_HARM:10 %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing <aoe> radius=14 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=14 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=14 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=14 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=14 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=14 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=14 target=undamageable </aoe>'
+    2:
+      chance: 70
+      cooldown: 140
+      souls: 600
+      effects:
+        - 'ADD_HARM:10 %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing <aoe> radius=16 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=16 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=16 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=16 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=16 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=16 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=16 target=undamageable </aoe>'
+    3:
+      chance: 75
+      cooldown: 130
+      souls: 600
+      effects:
+        - 'ADD_HARM:10 %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing <aoe> radius=18 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=18 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=18 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=18 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=18 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=18 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=18 target=undamageable </aoe>'
+    4:
+      chance: 80
+      cooldown: 120
+      souls: 600
+      effects:
+        - 'ADD_HARM:10 %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing %victim%'
+        - 'MESSAGE:&8&l[&bAE &4Enchant&8&l] &cSuperhero Landing <aoe> radius=20 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=20 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=20 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=20 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=20 target=undamageable </aoe>'
+        - 'WAIT:20'
+        - 'FIREBALL <aoe> radius=20 target=damageable </aoe>'
+        - 'FIREBALL <aoe> radius=20 target=undamageable </aoe>'

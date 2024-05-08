@@ -1,0 +1,34 @@
+heavy:
+  display: '%group-color%Heavy'
+  description: "Decreases damage from enemy bows\nby 2% per level."
+  applies-to: 'Armor'
+  type: 'DEFENSE_BOW'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_ARMOR
+  levels:
+    1:
+      chance: 4
+      cooldown: 4
+      effects:
+        - 'REMOVE_DAMAGE:2 %victim%'
+    2:
+      chance: 9
+      cooldown: 4
+      effects:
+        - 'REMOVE_DAMAGE:4 %victim%'
+    3:
+      chance: 12
+      cooldown: 4
+      effects:
+        - 'REMOVE_DAMAGE:6 %victim%'
+    4:
+      chance: 16
+      cooldown: 4
+      effects:
+        - 'REMOVE_DAMAGE:8 %victim%'
+    5:
+      chance: 21
+      cooldown: 4
+      effects:
+        - 'REMOVE_DAMAGE:10 %victim%'

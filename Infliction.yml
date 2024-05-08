@@ -1,0 +1,49 @@
+infliction:
+  display: '%group-color%Infliction'
+  description: "High chance of giving glowing effect and slow when your\ntarget is at low HP. 100 souls per use.\nReaze is working on this"
+  applies-to: 'Bow'
+  type: 'BOW'
+  group: 'ANCIENT' #should be SOUL
+  applies:
+    - BOW
+  levels:
+    1:
+      chance: 35
+      cooldown: 11
+      souls: 100
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:100 %victim%'
+        - 'POTION:SLOW:0:100 %victim%'
+        - 'MESSAGE:&8&l[&4AE &aEnchant&8&l] &cInfliction &7received. %victim%'
+    2:
+      chance: 40
+      cooldown: 9
+      souls: 100
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:100 %victim%'
+        - 'POTION:SLOW:1:100 %victim%'
+        - 'MESSAGE:&8&l[&4AE &aEnchant&8&l] &cInfliction &7received. %victim%'
+    3:
+      chance: 45
+      cooldown: 7
+      souls: 100
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:100 %victim%'
+        - 'POTION:SLOW:2:100 %victim%'
+        - 'MESSAGE:&8&l[&4AE &aEnchant&8&l] &cInfliction &7received. %victim%'
+    4:
+      chance: 50
+      cooldown: 5
+      souls: 100
+      condition:
+        - '%victim health% > 20 : %stop%'
+      effects:
+        - 'POTION:GLOWING:0:100 %victim%'
+        - 'POTION:SLOW:2:100 %victim%'
+        - 'MESSAGE:&8&l[&4AE &aEnchant&8&l] &cInfliction &7received. %victim%'

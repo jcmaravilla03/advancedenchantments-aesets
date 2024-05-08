@@ -1,0 +1,33 @@
+exterminator:
+  display: '%group-color%Exterminator'
+  description: "Temporarily disables enemy ability to summon mob defenders."
+  applies-to: 'Leggings'
+  type: 'DEFENSE'
+  group: 'LEGENDARY'
+  applies:
+    - ALL_LEGGINGS
+  levels:
+    1:
+      chance: 30
+      cooldown: 3
+      effects:
+        - 'DISABLE_ACTIVATION:undeadruse:4 %attacker%'
+        - 'DISABLE_ACTIVATION:guardians:4 %attacker%'
+        - 'DISABLE_ACTIVATION:spirits:4 %attacker%'
+        - 'DISABLE_ACTIVATION:whimsicalblessing:4 %attacker%'
+    2:
+      chance: 50
+      cooldown: 3
+      effects:
+        - 'DISABLE_ACTIVATION:undeadruse:15 %attacker%'
+        - 'DISABLE_ACTIVATION:guardians:15 %attacker%'
+        - 'DISABLE_ACTIVATION:spirits:15 %attacker%'
+        - 'DISABLE_ACTIVATION:whimsicalblessing:15 %attacker%'
+    3:
+      chance: 80
+      cooldown: 3
+      effects:
+        - 'DISABLE_ACTIVATION:undeadruse:30 %attacker%'
+        - 'DISABLE_ACTIVATION:guardians:30 %attacker%'
+        - 'DISABLE_ACTIVATION:spirits:30 %attacker%'
+        - 'DISABLE_ACTIVATION:whimsicalblessing:30 %attacker%'

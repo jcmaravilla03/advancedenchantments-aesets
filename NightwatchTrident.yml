@@ -1,0 +1,51 @@
+# Advanced Sets Weapons
+
+# What set should be required in order to apply effects from this weapon?
+# Set to '' to not require a set
+requireSet: 'Nightwatch of the Monument Armor'
+
+# Currently supported are only melee weapons
+material: TRIDENT
+
+# Custom Model Data (for 1.13+ servers with custom item packs)
+# Set custom model data integer
+customModelData: 0
+
+# Weapon's name
+name: '&9&lHalberd of the Nightwatch'
+
+# Weapon's lore
+lore:
+  - '&9&lHalberd of the Nightwatch'
+  - '&9The Halberd that pierces those who dare to intrude,'
+  - '&9ensures to end with a perplexing demise.'
+  - ''
+  - '&9&lNIGHTWATCH WEAPON BONUS'
+  - '&9Deal +100% damage to all enemies.'
+  - '&9Exasperation(Sustained Shuffle)'
+  - '&9Immobalize(Disables any reflecting capabilities of the target)'
+  - '&7&o(Requires all 4 Nightwatch items.)'
+
+# These enchants will be applied by default when giving out weapons
+# Advanced Enchantments are supported
+enchants:
+  - 'doublestrike:%1-3%'
+  - 'impaling:7'
+  - 'riptide:3'
+  - 'unbreaking:3'
+
+# ** Enchantment effects are supported - view enchantments.yml to see all effects available for custom weapons
+events:
+  ATTACK:
+    chance: 50
+    cooldown: 15
+    effects:
+      - 'MESSAGE: &9&l&d&lExasperation&f&l %victim%'
+      - 'MESSAGE: &9&l&d&lExasperation&f&l %attacker%'
+      - 'DISABLE_ACTIVATION:reflectiveblock:3 %victim%'
+      - 'DISABLE_ACTIVATION:vengefuldiminish:3 %victim%'
+      - 'RANDOMIZE_HOTBAR %victim%'
+      - 'WAIT:30'
+      - 'RANDOMIZE_HOTBAR %victim%'
+      - 'WAIT:30'
+      - 'RANDOMIZE_HOTBAR %victim%'

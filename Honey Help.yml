@@ -1,0 +1,23 @@
+honeyhelp:
+  display: '%group-color%Honey Help'
+  description: "When low on health, has a chance to spawn bees to distract your foes"
+  applies-to: 'Helmet'
+  type: 'DEFENSE;DEFENSE_BOW'
+  group: 'SOUL'
+  applies:
+    - ALL_HELMET
+  levels:
+    1:
+      chance: 10
+      cooldown: 120
+      soul: 143
+      condition: '%victim health% > 10 : %stop%'
+      effects:
+        - 'GUARD:BEE:&e&lSiera'
+        - 'GUARD:BEE:&e&lSiera'
+        - 'GUARD:BEE:&e&lSiera'
+        - 'GUARD:WOLF:&e&lSiera'
+        - 'GUARD:WOLF:&e&lSiera'
+        - 'GUARD:WOLF:&e&lSiera'
+        - 'POTION:REGENERATION:0:120 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &cHoney Help &7activated. %victim%'

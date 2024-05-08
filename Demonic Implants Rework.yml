@@ -1,0 +1,109 @@
+implants:
+  display: '%group-color%Implants'
+  description: "Passively heals +1 health\nand restores +1 hunger every few seconds."
+  applies-to: 'Helmets'
+  type: 'REPEATING'
+  group: 'ULTIMATE'
+  applies:
+    - ALL_HELMET
+  levels:
+    1:
+      cooldown: 20
+      effects:
+        - 'WAIT:40'
+        - 'ADD_HEALTH:1'
+        - 'ADD_FOOD:1'
+        - 'WAIT:40'
+    2:
+      cooldown: 17.5
+      effects:
+        - 'WAIT:40'
+        - 'ADD_HEALTH:1'
+        - 'ADD_FOOD:1'
+        - 'WAIT:40'
+    3:
+      cooldown: 15
+      effects:
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &eImplants %victim%'
+        - 'WAIT:40'
+        - 'ADD_HEALTH:1'
+        - 'ADD_FOOD:1'
+        - 'WAIT:40'
+alienimplants:
+  display: '%group-color%Alien Implants'
+  description: "Automatically heal 2x the HP of\nnormal Implants at 2x the rate.\nRequires Implants III."
+  applies-to: 'Helmets'
+  type: 'REPEATING'
+  group: 'HEROIC'
+  applies:
+    - ALL_HELMET
+  settings:
+    required-enchants:
+      - 'implants:3'
+    removed-enchants:
+      - 'implants'
+    removeable: true
+  levels:
+    1:
+      cooldown: 15
+      effects:
+        - 'WAIT:40'
+        - 'ADD_HEALTH:1'
+        - 'ADD_FOOD:1'
+        - 'WAIT:40'
+    2:
+      cooldown: 12.5
+      effects:
+        - 'WAIT:40'
+        - 'ADD_HEALTH:1'
+        - 'ADD_FOOD:2'
+        - 'WAIT:40'
+    3:
+      cooldown: 10
+      effects:
+        - 'WAIT:40'
+        - 'ADD_HEALTH:2'
+        - 'ADD_FOOD:2'
+        - 'WAIT:40'
+demonicimplants:
+  display: '%group-color%Demonic Implants'
+  description: "Automatically heal 2x the HP of normal\nImplants at 4x the rate, anddisabled.\nRequires AlienImplants III."
+  applies-to: 'Helmets'
+  type: 'REPEATING'
+  group: 'ANCIENT'
+  applies:
+    - ALL_HELMET
+  settings:
+    required-enchants:
+      - 'alienimplants:3'
+    removed-enchants:
+      - 'alienimplants'
+    not-applyable-with:
+      - 'mobdeflectx'
+      - 'eternalalloy'
+      - 'demonicphoenix'
+      - 'planetarydevastation'
+    removeable: false
+  levels:
+    1:
+      cooldown: 10
+      effects:
+        - 'WAIT:40'
+        - 'ADD_HEALTH:2'
+        - 'ADD_FOOD:2'
+        - 'WAIT:40'
+    2:
+      cooldown: 7.5
+      effects:
+        - 'WAIT:40'
+        - 'ADD_HEALTH:2'
+        - 'ADD_FOOD:3'
+        - 'WAIT:40'
+    3:
+      cooldown: 5
+      effects:
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &8Demonic Implants %victim%'
+        - 'WAIT:40'
+        - 'ADD_HEALTH:3'
+        - 'ADD_FOOD:3'
+        - 'WAIT:40'

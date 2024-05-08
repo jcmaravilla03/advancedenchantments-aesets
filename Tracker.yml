@@ -1,0 +1,64 @@
+defensetracker:
+  display: '%group-color%Defense Tracker'
+  description: "Alam mo ba tracker? yan yung pag marami ka kills, tracker ka"
+  applies-to: 'Armors'
+  type: 'DEFENSE;DEFENSE_BOW'
+  group: 'ANCIENT'
+  applies:
+    - ALL_ARMOR
+  levels:
+    1:
+      chance: 100
+      cooldown: 1
+      effects:
+        - 'MESSAGE:&d&l[&e%victim name% &eDef Tracker&d&l] &1&lYou Recieved: %damage% HP %victim%'
+        - 'MESSAGE:&d&l[&e%victim name% &eDef Tracker&d&l] &1&l%victim name%& &1&l has Recieved: &c&l%damage% <aoe> radius=128 target=damageable </aoe>'
+        - 'MESSAGE:&d&l[&e%victim name% &eDef Tracker&d&l] &1&l%victim name%& &1&l has Recieved: &c&l%damage% <aoe> radius=128 target=undamageable </aoe>'
+
+attacktracker:
+  display: '%group-color%Attack Tracker'
+  description: "Alam mo ba tracker? yan yung driver ng vehicle na 8 wheels"
+  applies-to: 'Weapons'
+  type: 'ATTACK;BOW'
+  group: 'ANCIENT'
+  applies:
+    - ALL_SWORD
+    - ALL_AXE
+    - TRIDENT
+    - BOW
+    - CROSSBOW
+  levels:
+    1:
+      chance: 100
+      cooldown: 1
+      effects:
+        - 'MESSAGE:&d&l[&e%attacker name% &eAtt Tracker&d&l] &c&lYou have Dealt: %damage% HP %attacker%'
+        - 'MESSAGE:&d&l[&e%attacker name% &eAtt Tracker&d&l] &c&l%attacker name% &c&l has Dealt: &c&l%damage% <aoe> radius=128 target=damageable </aoe>'
+        - 'MESSAGE:&d&l[&e%attacker name% &eAtt Tracker&d&l] &c&l%attacker name% &c&l has Dealt: &c&l%damage% <aoe> radius=128 target=undamageable </aoe>'
+
+
+Lifesteal Tracker Try        
+attacktracker:
+  display: '%group-color%Attack Tracker'
+  description: "Developers Bread and Butter in Balancing"
+  applies-to: 'Weapons'
+  type: 'ATTACK'
+  group: 'ANCIENT'
+  applies:
+    - ALL_SWORD
+    - ALL_AXE
+    - TRIDENT
+    - BOW
+    - CROSSBOW
+  levels:
+    1:
+      chance: 100
+      cooldown: 5
+      effects:
+        - 'ADD_HEALTH:<round><math> %damage%/<random number>2</random number></math></round> %attacker%'
+        - 'MESSAGE:&d&l[&2TRACKER&d&l] &c&lRandom: %random% HP Random %attacker%'
+        - 'MESSAGE:&d&l[&2TRACKER&d&l] &c&lRound: %round% HP Lifesteal %attacker%'
+        - 'MESSAGE:&d&l[&2TRACKER&d&l] &c&lMath: %math% HP Lifesteal %attacker%'
+        - 'MESSAGE:&d&l[&2TRACKER&d&l] &c&lDamage: %damage% HP Damage %attacker%'
+
+

@@ -1,0 +1,79 @@
+shuwagdito:
+  display: '%group-color%Shuwagdito'
+  description: "Uy wag po, usto mo sapakin kita bow ko?Shove away those who try to get close, use your bow to knockback both you and your target away from each other"
+  applies-to: 'Bow'
+  type: 'ATTACK'
+  group: 'ULTIMATE'
+  applies:
+    - BOW
+  levels:
+    1:
+      chance: 60
+      cooldown: 50
+      condition:
+        - '%victim is holding% contains SWORD or %victim is holding% contains AXE : %allow%'
+        - '%victim health% < 16 : %chance%+6'
+      effects:
+        - 'PULL_AWAY:2.0 %attacker%'
+        - 'PULL_AWAY:2.0 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &eDonttouchme &7activated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &eDonttouchme &7received. %victim%'
+    2:
+      chance: 70
+      cooldown: 45
+      condition:
+        - '%victim is holding% contains SWORD or %victim is holding% contains AXE : %allow%'
+        - '%victim health% < 18 : %chance%+6'
+      effects:
+        - 'PULL_AWAY:2.0 %attacker%'
+        - 'PULL_AWAY:3.0 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &eDonttouchme &7activated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &eDonttouchme &7received. %victim%'
+    3:
+      chance: 80
+      cooldown: 40
+      condition:
+        - '%victim is holding% contains SWORD or %victim is holding% contains AXE : %allow%'
+        - '%victim health% < 18 : %chance%+6'
+      effects:
+        - 'PULL_AWAY:3.0 %attacker%'
+        - 'PULL_AWAY:3.0 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &eDonttouchme &7activated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &eDonttouchme &7received. %victim%'
+    4:
+      chance: 90
+      cooldown: 35
+      condition:
+        - '%victim is holding% contains SWORD or %victim is holding% contains AXE : %allow%'
+        - '%victim health% < 20 : %chance%+6'
+      effects:
+        - 'PULL_AWAY:3.0 %attacker%'
+        - 'PULL_AWAY:4.0 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &eDonttouchme &7activated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &eDonttouchme &7received. %victim%'
+    5:
+      chance: 99
+      cooldown: 30
+      condition:
+        - '%victim is holding% contains SWORD or %victim is holding% contains AXE : %allow%'
+        - '%victim health% < 20 : %chance%+6'
+      effects:
+        - 'PULL_AWAY:4.0 %attacker%'
+        - 'PULL_AWAY:4.0 %victim%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &eDonttouchme &7activated. %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &eDonttouchme &7received. %victim%'
+
+
+
+
+
+ATTACK:
+    chance: 25
+    cooldown: 20
+    condition:
+      - '%attaker is holding% contains BOW : %allow%'
+    effects:
+      - 'ADD_HEALTH:<random number>1-3</random number> %victim%'
+      - 'PULL_AWAY:5.0 %attacker%'
+      - 'POTION:BLINDNESS:0:100 %victim%'
+      - 'POTION:CONFUSION:0:100 %victim%'

@@ -1,0 +1,24 @@
+boom: 
+  display: '%group-color%Boom boom'
+  description: "Upong landing a heightened jump, all players(enemies and allies) within 20 radius will talbugtalbug 3 times"
+  applies-to: 'Boots'
+  group: 'MASTERY'
+  type: 'FALL_DAMAGE'
+  applies:
+    - ALL_BOOTS
+  levels:
+    '1':
+      chance: 45
+      cooldown: 150
+      effects:
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] You used boom boom %attacker%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] You got boom boomed (%victim name%)'
+        - 'FIREBALL %victim%'
+        - 'FIREBALL <aoe> radius=20 target=undamageable </aoe>'
+        - 'WAIT:10'
+        - 'FIREBALL %victim%'
+        - 'FIREBALL <aoe> radius=20 target=damageable </aoe>'
+        - 'WAIT:10'
+        - 'FIREBALL %victim%'
+        - 'FIREBALL <aoe> radius=20 target=damageable </aoe>'
+        - 'WAIT:10'

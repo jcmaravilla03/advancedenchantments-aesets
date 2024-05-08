@@ -1,0 +1,91 @@
+permeatedhealing:
+  display: '%group-color%Permeated Healing'
+  description: "Truces for you to regain vigor, this enchantment prevents you\nfrom taking and dealing damage but heals hearts for 5 seconds.\nRequires Healing III and Deathgod III\nReaze is working on this"
+  applies-to: 'Helmets'  
+  type: 'DEFENSE'      
+  settings:
+    required-enchants:
+      - 'healing:3'
+      - 'deathgod:3'
+    removed-enchants:
+      - 'healing'
+      - 'deathgod'
+  group: 'ANCIENT' #should be MASTERY
+  applies:    
+    - ALL_HELMET  
+  levels:
+    1:
+      chance: 10
+      cooldown: 120
+      condition: '%victim health% > 6 : %stop%'
+      effects:
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &4Permeated Healing %victim%'
+        - 'ADD_HEALTH:2 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:2 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:2 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:2 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &4Permeated Healing ends %victim%'
+    2:
+      chance: 20
+      cooldown: 120
+      condition: '%victim health% > 8 : %stop%'
+      effects:
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &4Permeated Healing %victim%'
+        - 'ADD_HEALTH:4 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:4 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:4 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:4 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &4Permeated Healing ends %victim%'
+    3:
+      chance: 30
+      cooldown: 120
+      condition: '%victim health% > 10 : %stop%'
+      effects:
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &4Permeated Healing %victim%'
+        - 'ADD_HEALTH:6 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:6 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:6 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'WAIT:20'
+        - 'ADD_HEALTH:6 %victim%'
+        - 'REMOVE_DAMAGE:100 %victim%'
+        - 'REMOVE_DAMAGE:100 %attacker%'
+        - 'MESSAGE:&8&l[&bAE &aEnchant&8&l] &4Permeated Healing ends %victim%'

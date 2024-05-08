@@ -1,0 +1,44 @@
+perilousgears:
+  display: '%group-color%Perilous Gears'
+  description: "Blood pumps at a tremendous rate that gives speed like\nno other, but weak againts fire and ruptures your heart.\nRequires Gears III and Springs III\nReaze is working on this"
+  applies-to: 'Boots'
+  type: 'REPEATING'
+  group: 'ANCIENT' #should be MASTERY  
+  settings:
+    required-enchants:
+      - 'gears:3'
+    removed-enchants:
+      - 'gears'
+  applies:
+    - ALL_BOOTS
+  levels:
+    1:
+      cooldown: 1
+      condition:
+        - '%victim is on fire% = true : %stop%'
+      effects:
+        - 'WAIT:10'
+        - 'POTION:SPEED:4:20'
+        - 'POTION:JUMP:2:40'
+        - 'ADD_HARM:<random number>3-4</random number> <chance>20</chance>%victim%'
+        - 'WAIT:10'
+    2:
+      cooldown: 1
+      condition:
+        - '%victim is on fire% = true : %stop%'
+      effects:
+        - 'WAIT:10'
+        - 'POTION:SPEED:4:20'
+        - 'POTION:JUMP:2:40'
+        - 'ADD_HARM:<random number>2-4</random number> <chance>15</chance>%victim%'
+        - 'WAIT:10'
+    3:
+      cooldown: 1
+      condition:
+        - '%victim is on fire% = true : %stop%'
+      effects:
+        - 'WAIT:10'
+        - 'POTION:SPEED:4:20'
+        - 'POTION:JUMP:2:40'
+        - 'ADD_HARM:<random number>1-4</random number> <chance>10</chance>%victim%'
+        - 'WAIT:10'

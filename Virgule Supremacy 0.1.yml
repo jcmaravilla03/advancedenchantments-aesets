@@ -1,0 +1,53 @@
+virgulesupremacy: #valky deso for axe
+  display: '%group-color%Virgule Supremacy'
+  description: "Conqueror returns to its rightful place, Deal huge amount of damage that traps\nand gives wither to any sword wielder and a chance to debuff nearby enemies.\nRequires Extreme Insanity VIII and Overwield III\nReaze is working on this"
+  applies-to: 'Axes'
+  type: 'ATTACK'
+  settings:
+    required-enchants:
+      - 'extremeinsanity:8'
+      - 'overwield:3'
+    removed-enchants:
+      - 'insanity'
+      - 'overwield'
+    removeable: true
+  group: 'ANCIENT' #should be mastery
+  applies:
+    - ALL_AXE
+  levels:
+    1:
+      chance: 20
+      cooldown: 5
+      condition: '%victim is holding% contains SWORD : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+        - 'POTION:WITHER:2:40 %victim%'
+        - 'POTION:SLOW:250:30 <chance> 14 </chance>%victim%'
+        - 'CURE:INCREASE_DAMAGE <chance> 6 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:ABSORPTION <chance> 6 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:SATURATION <chance> 6 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:STRENGTH <chance> 6 </chance> <aoe> radius=2 target=damageable </aoe>'
+    2:
+      chance: 23
+      cooldown: 4
+      condition: '%victim is holding% contains SWORD : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+        - 'POTION:WITHER:2:50 %victim%'
+        - 'POTION:SLOW:250:30 <chance> 16 </chance>%victim%'
+        - 'CURE:INCREASE_DAMAGE <chance> 8 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:ABSORPTION <chance> 8 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:SATURATION <chance> 8 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:STRENGTH <chance> 8 </chance> <aoe> radius=2 target=damageable </aoe>'
+    3:
+      chance: 25
+      cooldown: 3
+      condition: '%victim is holding% contains SWORD : %allow%'
+      effects:
+        - 'DOUBLE_DAMAGE'
+        - 'POTION:WITHER:2:60 %victim%'
+        - 'POTION:SLOW:250:30 <chance> 20 </chance>%victim%'
+        - 'CURE:INCREASE_DAMAGE <chance> 10 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:ABSORPTION <chance> 10 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:SATURATION <chance> 10 </chance> <aoe> radius=2 target=damageable </aoe>'
+        - 'CURE:STRENGTH <chance> 10 </chance> <aoe> radius=2 target=damageable </aoe>'

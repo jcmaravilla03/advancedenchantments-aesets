@@ -1,0 +1,63 @@
+valentines: #OK 6
+  display: '%group-color%Valentines'
+  description: "Shift, pull lover, heal lover, fly"
+  applies-to: 'Boots'
+  group: 'ANCIENT'
+  type: 'SHIFT'
+  applies:
+    - ALL_BOOTS
+  levels:
+    '1':
+      chance: 100
+      cooldown: 200
+      effects:
+        - 'PULL_CLOSER:5.0 <aoe> radius=64 target=undamageable </aoe>'
+
+
+        - 'PULL_CLOSER:5.0 %victim has enchantment in hand of valentines%'
+        - 'POTION:BLINDNESS:0:40'
+        - 'TELEPORT_BEHIND <aoe> radius=8 target=damageable </aoe>'
+        - 'CURE:BLINDNESS'
+
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &4Valentines &7activated. %victim%'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &cValentines <aoe> radius=5 target=damageable </aoe>'
+        - 'MESSAGE:&8&l[&4AE Enchant&8&l] &cValentines <aoe> radius=5 target=undamageable </aoe>'
+bidirectionalteleportation:
+  display: '%group-color%Bidirectional Teleportation'
+  description: "Heroic Enchantment. Chance\nto grapple an enemy towards\nyou, or trap them for 1-2s."
+  applies-to: 'Bows'
+  type: 'BOW'
+  group: 'HEROIC'
+  applies:
+    - BOW
+    - CROSSBOW
+  levels:
+    1:
+      chance: 12
+      cooldown: 4
+      effects:
+        - 'PULL_CLOSER:5.0 %victim%'
+demonsamurai:
+  display: '%group-color%Demon Samurai'
+  description: "Calm and collected, composure of a samurai,\n If the enemy have extreme insanity in hand Disables \n and Increases your damage Bigtime."
+  applies-to: Sword
+  type: ATTACK
+  group: HEROIC
+  applies:
+    - ALL_SWORD
+  settings:
+    required-enchants:
+      - 'samurai:8'
+    removed-enchants:
+      - 'samurai'
+    removeable: true
+  levels:
+    1:
+      chance: 15
+      cooldown: 8
+      condition:
+      - '%victim has enchantment in hand of extremeinsanity% = true : %allow%'
+      effects:
+      - 'DISABLE_ACTIVATION:extremeinsanity:10 %victim%'
+      - 'ADD_HARM:<random number>1-2</random number> %victim%'
+      - 'MESSAGE:&8&l[&4AE Enchant&8&l] &dDemon Samurai. %attacker%'

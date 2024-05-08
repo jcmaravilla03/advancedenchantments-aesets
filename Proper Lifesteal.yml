@@ -1,0 +1,18 @@
+properlifesteal:
+  display: '%group-color%Proper Lifesteal'
+  description: "Damage Based Lifesteal"
+  applies-to: 'Weapons'
+  type: 'ATTACK'
+  group: 'LEGENDARY'
+  applies:
+    - ALL_AXE
+  levels:
+    1:
+      chance: 99
+      cooldown: 99
+      condition:
+        - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+        - 'INCREASE_DAMAGE:<random number>25-60</random number> %attacker%'
+        - 'ADD_HEALTH:<round><math> %damage%/<random number>2-15</random number></math></round> %attacker%'
+        - 'MESSAGE:&8&l[&aAE Enchant&8&l] &c&lYou stole %random% HP %attacker%'

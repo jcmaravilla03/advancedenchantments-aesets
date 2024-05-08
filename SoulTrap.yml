@@ -1,0 +1,50 @@
+soultrap:
+  display: '%group-color%Soul Trap'
+  description: "Active soul enchant. Your axe\nis imbued with sealing magic, and\nhas a chance to disable/negate all\nsoul enchantments of your enemies\non hit for (level x 4) seconds.\n2 souls per second."
+  applies-to: 'Weapon'
+  type: 'ATTACK'
+  group: 'SOUL'
+  applies:
+    - ALL_AXE
+    - ALL_SWORD
+    - TRIDENT
+  levels:
+    1:
+      chance: 19
+      souls: 2
+      effects:
+        - 'DISABLE_ACTIVATION:immortal:4'
+        - 'DISABLE_ACTIVATION:naturewrath:4'
+        - 'DISABLE_ACTIVATION:paradox:4'
+        - 'DISABLE_ACTIVATION:phoenix:4'
+        - 'DISABLE_ACTIVATION:refraction:4'
+        - 'DISABLE_ACTIVATION:divineimmolation:4'
+        - 'DISABLE_ACTIVATION:barrage:4'
+        - 'DISABLE_ACTIVATION:rogue:4'
+        - 'MESSAGE:&c&l** SOUL TRAP ** %victim%'
+    2:
+      chance: 27
+      souls: 2
+      effects:
+        - 'DISABLE_ACTIVATION:immortal:8'
+        - 'DISABLE_ACTIVATION:naturewrath:8'
+        - 'DISABLE_ACTIVATION:paradox:8'
+        - 'DISABLE_ACTIVATION:phoenix:8'
+        - 'DISABLE_ACTIVATION:refraction:8'
+        - 'DISABLE_ACTIVATION:divineimmolation:8'
+        - 'DISABLE_ACTIVATION:barrage:8'
+        - 'DISABLE_ACTIVATION:rogue:8'
+        - 'MESSAGE:&c&l** SOUL TRAP ** %victim%'
+    3:
+      chance: 32
+      souls: 2
+      effects:
+        - 'DISABLE_ACTIVATION:immortal:12'
+        - 'DISABLE_ACTIVATION:naturewrath:12'
+        - 'DISABLE_ACTIVATION:paradox:12'
+        - 'DISABLE_ACTIVATION:phoenix:12'
+        - 'DISABLE_ACTIVATION:refraction:12'
+        - 'DISABLE_ACTIVATION:divineimmolation:12'
+        - 'DISABLE_ACTIVATION:barrage:12'
+        - 'DISABLE_ACTIVATION:rogue:12'
+        - 'MESSAGE:&c&l** SOUL TRAP ** %victim%'
